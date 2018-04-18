@@ -13,7 +13,8 @@ footer {
 
     & > div {
       @include xy-cell(auto);
-      min-width: 100%;
+      max-width: 285px;
+      margin: 0 auto;
       margin-bottom: 40px;
       justify-content: space-between;
       margin-bottom: 40px;
@@ -22,12 +23,11 @@ footer {
 
       @include breakpoint (tablet) {
         text-align: left;
-        padding: 0 235px;
         margin-bottom: 30px;
       }
 
       @include breakpoint (large) {
-        padding: 0 345px;
+  
       }
 
       img {
@@ -51,19 +51,20 @@ footer {
         padding: 0 190px;
       }
     }
-    // p:first-of-type {
-    //   margin-bottom: 0px;
-    // }
+
     a {
       font-size: 10px;
       color: inherit;
-     
 
       &.privacy {
         border-left: 1px solid;
         margin: 0 10px;
-        padding-left: 10px;
+        padding-left: 10px; 
       }
+    }
+    
+    a:first-of-type {
+      margin-right: 0px;
     }
   }
 }

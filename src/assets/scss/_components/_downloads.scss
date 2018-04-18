@@ -7,6 +7,8 @@ section.downloads {
   @include breakpoint (medium){
     justify-content: space-between;
     padding: rem-calc(84);
+    padding-top: 50px;
+    padding-bottom: 0px;
   }
   
   p {
@@ -96,10 +98,12 @@ section.downloads {
       font-weight: 700;
       margin-bottom: rem-calc(10px);
       color: #C41230;
+      line-height: remcalc(23px);
+
     }
 
     &.title-bold {
-      font-size: rem-calc(13px);
+      font-size: rem-calc(14 px);
       font-weight: 300;
       margin-bottom: rem-calc(20px);
       max-width: 225px;

@@ -14,7 +14,6 @@
                     SEE THE BENEFITS 
                 </a>
                 <figure class="usg-logo" v-html="usgLogo">
-                    <!-- ${require('../assets/img/usg-logo-mobile.svg')} -->
                 </figure>
             </div>
         </div>
@@ -32,7 +31,6 @@
                     CALCULATE YOUR COST &amp; TIME SAVINGS
                 </a>   
                 <figure class="usg-logo" v-html="usgLogo">
-                        <!-- ${require('../assets/img/usg-logo-mobile.svg')} -->
                 </figure>
             </div>
         </div>
@@ -52,7 +50,6 @@
                     CALCULATE YOUR COST &amp; TIME SAVINGS
                 </a>   
                 <figure class="usg-logo" v-html="usgLogo">
-                        <!-- ${require('../assets/img/usg-logo-mobile.svg')} -->
                 </figure>
             </div>
         </div>
@@ -71,7 +68,6 @@
                     SEE THE BENEFITS 
                 </a>
                 <figure class="usg-logo" v-html="usgLogo">
-                    <!-- ${require('../assets/img/usg-logo-mobile.svg')} -->
                 </figure>
             </div>
         </div>

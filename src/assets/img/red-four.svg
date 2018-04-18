@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5353 2756 37.359 37.359">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c41230;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 21px;
+        font-family: Helvetica-Bold, Helvetica;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Group_72" data-name="Group 72" transform="translate(5190.562 2806)">
+    <ellipse id="Ellipse_5" data-name="Ellipse 5" class="cls-1" cx="18.679" cy="18.679" rx="18.679" ry="18.679" transform="translate(162.437 -50)"/>
+    <text id="_4" data-name="4" class="cls-2" transform="translate(180.437 -24.704)"><tspan x="-5.84" y="0">4</tspan></text>
+  </g>
+</svg>

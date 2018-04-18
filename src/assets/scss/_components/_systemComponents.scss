@@ -1,0 +1,109 @@
+.systemComponents {
+    @include xy-grid();    
+    background: #e8e8e8;
+    text-align: center;
+    figure {
+        @include xy-cell (12);
+        max-width: 430px;
+        margin: 0 auto;
+        @include breakpoint (large) {
+            @include xy-cell (6);
+            max-width: 100%;
+            height: 723px;
+        }
+        
+
+        img {
+            max-width: 430px;
+            width: 100%;
+            @include breakpoint (large) {
+                width: 640px;
+                max-width: none;
+            }
+        }
+
+    }
+    .container {
+        @include xy-grid ();
+        @include breakpoint (large) {
+            @include xy-cell (6);
+        }
+        h3 {
+            @include xy-cell (12);
+            color: #C41230;
+            font-size: rem-calc(30px);
+            font-weight: 700;
+            line-height: 36px;
+
+            @include breakpoint (tablet) {
+                margin-bottom: 12px;
+            }
+
+            @include breakpoint (large) {
+                font-size: rem-calc(36px);
+                line-height: 43px;
+            }
+        }
+        div {
+            @include xy-cell (12);
+            margin: 18px auto;
+            @include breakpoint (tablet) {
+                @include xy-cell (6);
+            }
+            @include breakpoint (large) {
+                @include xy-cell (12);
+            }
+            figure {
+                height: rem-calc(37px); 
+                width: rem-calc(37px);
+                margin: 0 auto 10px;
+
+                img {
+                    max-width: 430px;
+                    width: 100%;
+                    @include breakpoint (large) {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            
+            p {
+                font-size: rem-calc(14px);
+                line-height: 18px;
+                font-weight: 700;
+            
+                &.brand {
+                    color: #5F6062;
+                    font-weight: 400;
+                    
+                }
+                &.title {
+                    color: $dark-red;
+                    @include breakpoint (tablet) {
+                        padding: 0 45px;
+                    }
+                    
+                }
+                &.additonal {
+                    font-size: rem-calc(12px);
+                    line-height: 14px;
+                }
+            }
+        
+        }
+        a {
+            margin: 0 auto;
+            margin-top: 20px;
+            display: inline-block;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 44px;
+            padding: 0px 30px;
+            background: #C41230;
+            border-radius: 25px;
+            color: #fff;
+        }
+    }
+}
