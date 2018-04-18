@@ -1,0 +1,138 @@
+section.downloads {
+  @include xy-grid;
+  @include flex-align(center);
+  background: #e8e8e8;
+  justify-content: center;
+  padding: 60px 0px;
+  @include breakpoint (medium){
+    justify-content: space-between;
+    padding: rem-calc(84);
+  }
+  
+  p {
+    @include xy-cell(12);
+    text-align: center;
+    margin-bottom: rem-calc(36);
+  }
+  h3 {
+    color: #C41230;
+    font-size: rem-calc(32);
+  }
+
+  p {
+    margin-bottom: rem-calc(60);
+  }
+
+  div {
+    max-width: rem-calc(280px);
+    margin: 10px 0px;
+    @include breakpoint (medium) {
+      margin: 10px auto;
+    }
+    &.title {
+      @include xy-cell(12);
+      min-width: 100%;
+      h3 {
+        @include xy-cell(12);
+        margin: 0 auto;
+        text-align: center;
+        max-width: 340px;
+        border-bottom: 2px solid black;
+        line-height: 72px;
+        margin-bottom: 15px;
+        @include breakpoint (tablet) {
+          @include xy-cell(7);
+          max-width: 380px;
+          margin: 0 auto;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  .download-img {
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto rem-calc(20px);
+    height: rem-calc(105px);
+    width: rem-calc(105px);
+
+    &.d-1 {
+      background-image: url("../img/icon-time.png");
+    }
+
+    &.d-2 {
+      background-image: url("../img/icon-water.png");
+    }
+
+    &.d-3 {
+      background-image: url("../img/icon-pen.png");
+    }
+
+    &.d-4 {
+      background-image: url("../img/icon-wrench.png");
+    }
+
+    .download-hover-info {
+      visibility: hidden;
+      padding: rem-calc(35px) 0 0;
+      height: 100%;
+      width: 100%;
+
+
+      p {
+        font-size: rem-calc(12px);
+        margin: 0 0 rem-calc(10px);
+        text-align: left;
+        line-height: rem-calc(18px);
+        padding: 0 rem-calc(20px) 0 rem-calc(30px);
+      }
+    }
+  }
+
+  p {
+    &.title {
+      font-size: rem-calc(18px);
+      font-weight: 700;
+      margin-bottom: rem-calc(10px);
+      color: #C41230;
+    }
+
+    &.title-bold {
+      font-size: rem-calc(13px);
+      font-weight: 300;
+      margin-bottom: rem-calc(20px);
+      max-width: 225px;
+      margin: 0 auto;
+    }
+  }
+
+  .download, span {
+    text-transform: uppercase;
+  }
+  .download {
+    color: $primary-color;
+    display: block;
+    font-weight: 600;
+    font-size: rem-calc(14px);
+    position: relative;
+    text-align: center;
+    margin-bottom: rem-calc(5px);
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: svg-load('../img/icon_download.svg', fill=#000, stroke=#fff) no-repeat center center / contain;
+      margin-right: rem-calc(5px);
+      height: rem-calc(13px);
+      width: rem-calc(14px);
+    }
+  }
+
+  span {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+  }
+}

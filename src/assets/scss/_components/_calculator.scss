@@ -1,0 +1,241 @@
+section.calculator-section {
+  @include xy-grid;
+  @include flex-align(center);
+  background: $white;
+  padding: rem-calc(60) 0 rem-calc(60);
+
+  @include breakpoint (medium) {
+    padding: rem-calc(84);
+  }
+
+  h3,p {
+    text-align: center;
+    margin-bottom: rem-calc(36);
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    @include breakpoint (medium) {
+      font-size: 42px;
+    }
+  }
+
+  p {
+    @include xy-cell(12);
+    padding: 0 22px 0;
+    margin-bottom: 20px;
+    @include breakpoint (medium) {
+      padding: 0px;
+    }
+  }
+
+  P:last-of-type {
+    font-size: rem-calc(14);
+    margin-bottom: 60px;
+  }
+
+  .calculator-wrapper {
+    width: 100%;
+
+    .calculator {
+      display: block;
+      max-width: 850px;
+      margin: 0 auto;
+      width: 100%;
+
+      .user-input {
+        background: $primary-color;
+        padding: 26px 23px;
+        width: 100%;
+
+        h4 {
+          color: $white;
+          font-size: rem-calc(14px);
+          font-weight: 600;
+          text-align: center;
+          margin-bottom: 26px;
+          width: 100%;
+        }
+
+        .inputs {
+          display: flex;
+          justify-content: space-between;
+          @include xy-grid();
+
+          .wallboards, .total-sqft {
+            @include xy-cell(12);
+            
+            position: relative;
+            @include breakpoint (medium) {
+              max-width: calc(50% - 25px);
+              @include xy-cell(6);
+
+            }
+
+            &:after {
+              content: "sq. ft.";
+              display: inline-block;
+              font-size: rem-calc(10px);
+              color: $primary-color;
+              position: absolute;
+              right: 10px;
+              top: 8px;
+            }
+
+            label {
+              color: $primary-color;
+              font-size: 14px;
+              font-weight: 500;
+              position: absolute;
+              top: 0px;
+              left: 10px;
+              z-index: 3;
+
+              @include breakpoint(medium) {
+                top: 18px;
+                left: 10px;
+              }
+
+              &.hide {
+                display: none;
+              }
+            }
+
+            input {
+              border: none;
+              color: $primary-color;
+              font-size: rem-calc(38);
+              font-weight: 200;
+              text-align: right;
+              padding: 3px 38px 3px 10px;
+              position: relative;
+              height: 77px;
+              max-height: 77px;
+              @include breakpoint (medium) {
+                max-height: 48px;
+              }
+              width: 100%;
+            }
+          }
+
+          .wallboards {
+            input {
+              margin-bottom: 20px;
+            }
+          }
+
+          .total-sqft {
+            @include xy-cell(12);
+            max-width: 100%;
+
+            &:after {
+              top: 16px;
+            }
+
+            label {
+              top: 0px;
+              @include breakpoint (medium) {
+                top: 32px;
+              }
+            }
+
+            input {
+              font-size: 3.3rem;;
+              max-height: 78px;
+            }
+          }
+        }
+      }
+
+      .outputs {
+        .right {
+          margin-top: 15px;
+          @include breakpoint (medium) {
+            margin-top: 0px;
+          }
+        }
+        .left, .right {
+          @include xy-cell(12);
+          
+          @include breakpoint (medium) {
+            @include xy-cell(4);
+          }
+
+          p {
+            color: $primary-color;
+            font-size: rem-calc(50);
+            font-weight: 200;
+            margin-bottom: 0;
+          }
+
+          span {
+            color: $primary-color;
+            display: block;
+            font-size: rem-calc(14);
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+
+        .center {
+          text-align: center;
+          @include xy-cell(12);
+          margin: 20px 0px 0px;
+          
+          @include breakpoint (medium) {
+            @include xy-cell(4);
+            margin: 0px;
+          }
+
+          span {
+            display: inline-block;
+            font-size: rem-calc(16);
+            font-weight: 200;
+            color: $primary-color;
+            margin-bottom: 10px;
+          }
+
+          svg {
+            display: block;
+            margin: 0 auto;
+            height: 82px;
+            width: 29px;
+          }
+        }
+
+        .water-saving, .co2, .fuel-saving, .weight-saving {
+          @include xy-grid();
+          background: rgb(248, 248, 248);
+          padding: 20px 20px;
+          margin-top: 10px;
+        }
+
+        .co2 {
+          background: #eeeeee;
+
+          svg {
+            height: 82px;
+            width: 52px;
+          }
+        }
+
+        .fuel-saving {
+          svg {
+            height: 62px;
+            width: 62px;
+          }
+        }
+
+        .weight-saving {
+          background: #eeeeee;
+
+          svg {
+            height: 67px;
+            width: 55px;
+          }
+        }
+      }
+    }
+  }
+}

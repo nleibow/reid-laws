@@ -1,0 +1,31 @@
+<div class="video-overlay" id="video-overlay">
+    <div class="close-wrapper">
+        <figure id="close-video-button">${require('../assets/img/close-btn.svg')}</figure>
+    </div>
+    <div class="videoWrapper">
+
+        <div id="player"></div>
+
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            function onYouTubeIframeAPIReady() {
+                window.videoPlayer = new YT.Player('player', {
+                    height: '390',
+                    width: '640',
+                    videoId: 'eqWYwEPHtJk'
+                });
+            }
+
+        </script>
+        <!---->
+        <!--<iframe id="player" type="text/html" width="640" height="390"-->
+        <!--src="http://www.youtube.com/embed/T4WyGfphBXk?enablejsapi=1&origin=http://example.com"-->
+        <!--frameborder="0"></iframe>-->
+    </div>
+
+</div>
