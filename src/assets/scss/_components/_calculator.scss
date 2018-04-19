@@ -2,37 +2,80 @@ section.calculator-section {
   @include xy-grid;
   @include flex-align(center);
   background: $white;
-  padding: rem-calc(60) 0 rem-calc(60);
+  padding: rem-calc(60) 7px rem-calc(60);
 
-  @include breakpoint (medium) {
-    padding: rem-calc(84);
+  @include breakpoint (tablet) {
+    padding: rem-calc(60px) rem-calc(50px);
   }
 
   h3,p {
+    
     text-align: center;
     margin-bottom: rem-calc(36);
   }
 
   h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    @include breakpoint (medium) {
-      font-size: 42px;
+    color: $dark-red;
+    font-size: 25px;
+    margin-bottom: 0px;
+    font-weight: 300;
+    padding: 0 15px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    span {
+      font-weight: 600;
     }
+    @include breakpoint (tablet) {
+      width: 120%;
+      min-width: 120%;
+      font-size: 30px;
+      line-height: 44px;
+      letter-spacing: -1px;
+    }
+  }
+
+  h3:last-of-type {
+    margin-bottom: rem-calc(20px);
+    padding: 0 10px;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  h4 {
+    text-align: center;
+    color: $dark-red;
+    font-size: 25px;
+    margin: 0 13px;
+    font-weight: 300;
+    padding: 0 15px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    border-top: 2px solid $dark-gray;
+    margin-bottom: 20px;
+    padding-top: 20px;
   }
 
   p {
     @include xy-cell(12);
-    padding: 0 22px 0;
+    color: $light-gray;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 0;
     margin-bottom: 20px;
-    @include breakpoint (medium) {
+    margin: 0 10px;
+   
+    @include breakpoint (tablet) {
       padding: 0px;
     }
   }
 
   P:last-of-type {
-    font-size: rem-calc(14);
-    margin-bottom: 60px;
+    font-size: rem-calc(12);
+    margin-bottom: 45px;
+    @include breakpoint (tablet) {
+      padding: 0 30px;
+    }
   }
 
   .calculator-wrapper {
@@ -45,12 +88,24 @@ section.calculator-section {
       width: 100%;
 
       .user-input {
-        background: $primary-color;
+        background-color: #ECECEB;
         padding: 26px 23px;
         width: 100%;
 
+        figure {
+          width: 50px;
+          margin: 18px auto 15px;
+          @include breakpoint (tablet) {
+            width: 36px;
+            position: absolute;
+            z-index: 1;
+            bottom: 20px;
+            left: 70px;
+          }
+        }
+
         h4 {
-          color: $white;
+          color: $light-gray;
           font-size: rem-calc(14px);
           font-weight: 600;
           text-align: center;
@@ -61,30 +116,51 @@ section.calculator-section {
         .inputs {
           display: flex;
           justify-content: space-between;
+          background-color: #fff;
           @include xy-grid();
+          position: relative;
+          @include breakpoint (tablet) {
+            background-color: #ECECEB;
+          }
+
+          p {
+            margin-bottom: 20px;
+            @include breakpoint (tablet) {
+              @include xy-cell(shrink);
+              position: absolute;
+              z-index: 1;
+              top: 65px;
+              left: 130px;
+              font-size: rem-calc(11px);
+        }
+          }
 
           .wallboards, .total-sqft {
-            @include xy-cell(12);
+            @include xy-cell(8);
+            padding-left: 45px;
             
             position: relative;
-            @include breakpoint (medium) {
-              max-width: calc(50% - 25px);
-              @include xy-cell(6);
+            @include breakpoint (tablet) {
+              @include xy-cell(11);
 
             }
 
             &:after {
-              content: "sq. ft.";
+              content: "SHOWER";
               display: inline-block;
-              font-size: rem-calc(10px);
-              color: $primary-color;
+              font-size: rem-calc(14px);
+              font-weight: 300;
+              color: $light-gray;
               position: absolute;
-              right: 10px;
-              top: 8px;
+              right: -80px;
+              bottom: 33px;
+              @include breakpoint (tablet) {
+                right: 44px;
+              }
             }
 
             label {
-              color: $primary-color;
+              color: $dark-gray;
               font-size: 14px;
               font-weight: 500;
               position: absolute;
@@ -92,7 +168,7 @@ section.calculator-section {
               left: 10px;
               z-index: 3;
 
-              @include breakpoint(medium) {
+              @include breakpoint(tablet) {
                 top: 18px;
                 left: 10px;
               }
@@ -104,16 +180,21 @@ section.calculator-section {
 
             input {
               border: none;
-              color: $primary-color;
-              font-size: rem-calc(38);
+              color: $dark-gray;
+              font-size: rem-calc(70);
               font-weight: 200;
               text-align: right;
-              padding: 3px 38px 3px 10px;
+              border: 1px solid $dark-gray;
               position: relative;
-              height: 77px;
-              max-height: 77px;
-              @include breakpoint (medium) {
-                max-height: 48px;
+              height: 80px;
+              max-height: 80px;
+
+             
+              @include breakpoint (tablet) {
+                max-height: 80px;
+                margin-top:35px;
+                padding-right: 110px;
+                border: none;
               }
               width: 100%;
             }
@@ -135,7 +216,7 @@ section.calculator-section {
 
             label {
               top: 0px;
-              @include breakpoint (medium) {
+              @include breakpoint (tablet) {
                 top: 32px;
               }
             }
@@ -151,30 +232,63 @@ section.calculator-section {
       .outputs {
         .right {
           margin-top: 15px;
-          @include breakpoint (medium) {
+          @include breakpoint (tablet) {
             margin-top: 0px;
           }
         }
         .left, .right {
           @include xy-cell(12);
+          position: relative;
+          margin: 0;
+          margin-top: 15px;
           
-          @include breakpoint (medium) {
+          @include breakpoint (tablet) {
             @include xy-cell(4);
           }
 
           p {
-            color: $primary-color;
-            font-size: rem-calc(50);
-            font-weight: 200;
+            color: $dark-red;
+            font-size: rem-calc(70);
+            font-weight: 300;
             margin-bottom: 0;
+            height: 40px;
+            margin: 0;
+            margin-top: 15px;
+            &.brand {
+              font-size: rem-calc(12px);
+              color: $light-gray;
+              padding: 0px 60px;
+              margin-top: 8px;
+              line-height: 14px;
+              @include breakpoint (tablet) {
+                padding: 0px;
+              }
+            }
           }
 
           span {
-            color: $primary-color;
+            color: $dark-red;
             display: block;
             font-size: rem-calc(14);
-            font-weight: 600;
+            font-weight: 300;
             text-align: center;
+            @include breakpoint (tablet) {
+              position: absolute;
+              right: 30px;
+              bottom: 50px;
+            }
+
+            &.money {
+              position: absolute;
+              right: 0;
+              left: -56px;
+              top: 0;
+              
+              @include breakpoint (tablet) {
+                left: 0px; 
+                right: 76px;     
+              }
+            }
           }
         }
 
@@ -183,56 +297,142 @@ section.calculator-section {
           @include xy-cell(12);
           margin: 20px 0px 0px;
           
-          @include breakpoint (medium) {
+          @include breakpoint (tablet) {
             @include xy-cell(4);
             margin: 0px;
           }
 
           span {
             display: inline-block;
-            font-size: rem-calc(16);
-            font-weight: 200;
-            color: $primary-color;
-            margin-bottom: 10px;
+            font-size: rem-calc(14);
+            font-weight: 600;
+            color: $dark-gray;
+            line-height: 22px;
           }
 
           svg {
             display: block;
             margin: 0 auto;
-            height: 82px;
-            width: 29px;
+            
           }
         }
 
-        .water-saving, .co2, .fuel-saving, .weight-saving {
+        .days, .labor, .materials, .results {
           @include xy-grid();
           background: rgb(248, 248, 248);
           padding: 20px 20px;
           margin-top: 10px;
-        }
-
-        .co2 {
-          background: #eeeeee;
-
           svg {
-            height: 82px;
-            width: 52px;
+            margin-bottom: 10px;
           }
         }
 
-        .fuel-saving {
-          svg {
-            height: 62px;
-            width: 62px;
+        .results {
+          @include xy-grid();
+          background-color: $dark-red;
+          padding: 40px 10px;
+          justify-content: center;
+          p {
+            @include xy-cell(12);
+            font-size: rem-calc(16px);
+            font-weight: 600;
+            color: #fff;
+            
+            @include breakpoint (tablet) {
+              @include xy-cell(6);
+              margin: 0;
+            }
+          }
+
+          div {
+            @include xy-cell(10);
+            display: flex;
+            padding: 0;
+            margin: 0;
+            @include breakpoint (tablet) {
+              @include xy-cell(6);
+              justify-content: center;
+              padding-top: 10px;
+          
+            }
+            div {
+              @include xy-cell(6);
+              background-color: $dark-red;
+             
+              @include breakpoint (tablet) {
+                @include xy-cell(4);
+                padding-right: 75px;
+                margin-left: 40px;
+              }
+              div {
+                position: relative;
+                  p {
+                    font-size: 70px;
+                    font-weight: 300;
+                    margin: 0;
+                  }
+                  &.days {
+                    p{
+                      text-align: left;
+                      padding-left: 45px;
+                      
+                    }
+                    span {
+                      position: absolute;
+                      left: 90px;
+                      top: 20px;
+                      color: #fff;
+                      font-weight: 300;
+                      @include breakpoint (tablet) {
+                        left: 50px;
+                        top: 30px;
+                        z-index: 2;
+                      }
+                    }
+                  }
+                  &.price {
+                    p{
+                      text-align: left;
+                      padding-left: 25px;
+                    }
+                    span {
+                      position: absolute;
+                      left: 15px;
+                      top: -25px;
+                      color: #fff;
+                      font-weight: 300;
+                      @include breakpoint (tablet) {
+                        left: -5px;
+                        
+                      }
+                    }
+                  }
+                }
+              }
           }
         }
 
-        .weight-saving {
+        .labor {
           background: #eeeeee;
 
           svg {
-            height: 67px;
-            width: 55px;
+            height: 61px;
+           
+          }
+        }
+
+        .materials {
+          background-color: #d7d7d7;
+          svg {
+            height: 71px;
+          }
+        }
+
+        .days {
+          background: #d7d7d7;
+
+          svg {
+            max-height: 68px;;
           }
         }
       }

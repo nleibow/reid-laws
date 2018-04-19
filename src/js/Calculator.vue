@@ -2,73 +2,109 @@
     <div class="calculator-wrapper">
         <div class="calculator">
             <section class="user-input">
-                <h4>SQUARE FOOTAGE OF YOUR PROJECT</h4>
                 <div class="inputs">
+                     <figure v-html="Calculator">
+                        </figure>    
+                        <p>
+                            How many showers are you planning to install?
+                        </p>    
                     <div class="wallboards half-inch">
-                        <label :class="{hide: halfInchActive}" for="halfInchWallboard">1/2 IN. WALLBOARD</label>
-                        <input id="halfInchWallboard" v-model="halfInchInput" @input="changeHandlerHalf"/>
-                    </div>
-                    <div class="wallboards five-eighths">
-                        <label :class="{hide: fiveEigthsActive}" for="halfInchWallboard">5/8 IN. WALLBOARD</label>
-                        <input v-model="fiveEighthsInchInput"  @input="changeHandlerFiveEigths"/>
-                    </div>
-                    <div class="total-sqft">
-                        <label for="halfInchWallboard">TOTAL PROJECT SQ. FT.</label>
-                        <input value="0" v-model="squareFootSum" disabled/>
+                       
+                        <input id="showers" v-model="halfInchInput" @input="changeHandlerHalf"/>
                     </div>
                 </div>
             </section>
             <section class="outputs">
-                <div class="water-saving">
+                <div class="days">
                     <div class="left">
                         <p>{{galReduction}}</p>
-                        <span>GALLONS</span>
+                        <span>DAYS</span>
+                        <p class="brand">
+                            USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
+                        </p>
                     </div>
                     <div class="center">
-                        <span>WATER SAVINGS</span>
-                        <figure v-html="WaterIcon"></figure>
+                        <figure v-html="Calendar"></figure>
+                         <span>TOTAL NUMBER OF DAYS<sup>*</sup></span>
                     </div>
                     <div class="right">
                         <p>{{flushes}}</p>
-                        <span>TOILET FLUSHES</span>
+                        <span>DAYS</span>
+                        <p class="brand">
+                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                        </p>    
                     </div>
                 </div>
-                <div class="co2">
+                <div class="labor">
                     <div class="left">
                         <p>{{co2Reduction}}</p>
-                        <span>POUNDS</span>
+                        <span class="money">$</span>
+                       <p class="brand">
+                            USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
+                        </p>
                     </div>
                     <div class="center">
-                        <span>CO<sub>2</sub> REDUCTION</span>
-                        <figure v-html="Co2Icon"></figure>
+                        <figure v-html="Wrench"></figure>
+                        <span>LABOR COSTS</span>
                     </div>
                     <div class="right">
                         <p>{{carsOffRoad}}</p>
-                        <span>CARS OFF THE ROAD</span>
+                         <span class="money">$</span>
+                        <p class="brand">
+                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                        </p>    
                     </div>
                 </div>
-                <div class="fuel-saving">
+                <div class="materials">
                     <div class="left">
                         <p>{{fuelSavings}}</p>
-                        <span>GALLONS</span>
+                        <span class="money">$</span>
+                        <p class="brand">
+                            USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
+                        </p>
                     </div>
                     <div class="center">
-                        <span>FUEL SAVINGS</span>
-                        <figure v-html="FuelIcon"></figure>
+                        <figure v-html="Chissel"></figure>
+                         <span>MATERIALS COSTS</span>
                     </div>
                     <div class="right">
                         <p>{{milesNotDriven}}</p>
-                        <span>MILES NOT DRIVEN</span>
+                         <span class="money">$</span>
+                        <p class="brand">
+                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                        </p>    
                     </div>
                 </div>
+                <div class="results">
+                    <p class="title">
+                        TOTAL SAVINGS WITH 
+                        USG&nbsp;DUROCK™&nbsp;BRAND&nbsp;INFINITY&nbsp;DRAIN®
+                        SHOWER SYSTEM
+                    </p> 
+                    <div class="facts">
+                        <div>
+                            <div class="days">
+                                <p>5</p>
+                                <span >DAYS</span>
+                             </div> 
+                       </div> 
+                       <div>    
+                            <div class="price">
+                                <p>455</p>
+                                <span class="money">$</span>
+                            </div>  
+                       </div>     
+                    </div>       
+                </div>    
             </section>
         </div>
     </div>
 </template>
 <script>
-    import waterIcon from "../assets/img/icon_water.svg";
-    import co2Icon from "../assets/img/icon_co2.svg";
-    import fuelIcon from "../assets/img/icon_fuel_gauge.svg";
+    import calendar from "../assets/img/calendar.svg";
+    import wrench from "../assets/img/wrench.svg";
+    import chissel from "../assets/img/chissel.svg";
+    import calculator from "../assets/img/calculator.svg";
 
     var reg = /^\d+$/;
 
@@ -77,9 +113,10 @@
         props: [],
         data() {
             return {
-                WaterIcon: waterIcon,
-                Co2Icon: co2Icon,
-                FuelIcon: fuelIcon,
+                Calendar: calendar,
+                Wrench: wrench,
+                Chissel: chissel,
+                Calculator: calculator,
                 halfInchInput: 0,
                 previousHalfInch: 0,
                 fiveEighthsInchInput: 0,
@@ -98,17 +135,8 @@
             halfInchFuelSaving: function () {
                 return Math.round((this.halfInchInput/1000)*0.177);
             },
-            fiveEighthsGalReduction: function () {
-                return Math.round((((this.fiveEighthsInchInput/1000)*1.02)-((this.fiveEighthsInchInput/1000)*0.76))*264.172052);
-            },
-            fiveEighthsCo2Reduction: function () {
-                return Math.round((((this.fiveEighthsInchInput/1000)*257)-((this.fiveEighthsInchInput/1000)*202))*2.20462262);
-            },
-            fiveEighthsFuelSaving: function () {
-                return Math.round((this.fiveEighthsInchInput/1000)*0.463);
-            },
             galReduction: function () {
-                return (this.halfInchGalReduction + this. fiveEighthsGalReduction).toLocaleString();
+                return (this.halfInchInput*3).toLocaleString();
             },
             co2Reduction: function () {
                 return (this.halfInchCo2Reduction + this. fiveEighthsCo2Reduction).toLocaleString();

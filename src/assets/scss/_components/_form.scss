@@ -1,7 +1,8 @@
 section.form {
-  background: $medium-gray;
+  background: #a1a1a3;
   padding: rem-calc(50) rem-calc(20px);
   display: flex;
+  text-align: center;
 
   & > div {
     @include xy-grid-container(1200px);
@@ -15,21 +16,40 @@ section.form {
       }
 
       h3 {
-        font-size: rem-calc(36);
-        margin-bottom: rem-calc(40);
+        color: #fff;
+        font-size: rem-calc(32);
+        margin-bottom: rem-calc(32);
+        font-weight: 300;
+        line-height: 40px;
+      }
+
+      a {
+        &.button {
+          margin: 0 auto;
+          display: inline-block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 44px;
+          padding: 0px 30px;
+          background: #C41230;
+          border-radius: 25px;
+          color: #fff;
+          margin-bottom: 40px;
+        }
       }
 
       dl {
-        color: $primary-color;
+        color: #fff;
         text-transform: uppercase;
 
         dt {
-          font-size: rem-calc(14);
+          font-size: rem-calc(16);
+          font-weight: 300;
         }
 
         dd {
           font-weight: 600;
-          font-size: rem-calc(20);
+          font-size: rem-calc(22);
           margin-bottom: rem-calc(26);
 
           a {
@@ -51,7 +71,7 @@ section.form {
       @include xy-cell(12)
 
       @include breakpoint (tablet) {
-        @include xy-cell(6)
+        @include xy-cell(6);
         }
 
       @include breakpoint(large) {

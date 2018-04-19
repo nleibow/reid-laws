@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5328.474 3830.949 63.853 68.302">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c41230;
+      }
+    </style>
+  </defs>
+  <g id="Group_61" data-name="Group 61" transform="translate(5328.474 3830.949)">
+    <g id="Group_52" data-name="Group 52" transform="translate(0 7.197)">
+      <g id="Group_51" data-name="Group 51">
+        <g id="Group_50" data-name="Group 50">
+          <path id="Path_81" data-name="Path 81" class="cls-1" d="M52.208,5.5v5.234H43.572V5.5H20.019v5.234H11.253V5.5H0V66.605H39.646L63.853,44.1V5.631H52.208Zm6.935,37.422H38.73V62.68H4.972V17.407h54.17Z" transform="translate(0 -5.5)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_54" data-name="Group 54" transform="translate(12.692)">
+      <g id="Group_53" data-name="Group 53">
+        <path id="Path_82" data-name="Path 82" class="cls-1" d="M15.719,3.009a3.009,3.009,0,1,0-6.019,0v8.243h6.019Z" transform="translate(-9.7)"/>
+      </g>
+    </g>
+    <g id="Group_56" data-name="Group 56" transform="translate(44.88)">
+      <g id="Group_55" data-name="Group 55">
+        <path id="Path_83" data-name="Path 83" class="cls-1" d="M40.319,3.009a3.009,3.009,0,1,0-6.019,0v8.243h6.15V3.009Z" transform="translate(-34.3)"/>
+      </g>
+    </g>
+    <rect id="Rectangle_31" data-name="Rectangle 31" class="cls-1" width="8.898" height="7.72" transform="translate(11.253 26.169)"/>
+    <rect id="Rectangle_32" data-name="Rectangle 32" class="cls-1" width="8.898" height="7.72" transform="translate(22.898 26.169)"/>
+    <rect id="Rectangle_33" data-name="Rectangle 33" class="cls-1" width="8.898" height="7.72" transform="translate(34.674 26.169)"/>
+    <rect id="Rectangle_34" data-name="Rectangle 34" class="cls-1" width="8.898" height="7.72" transform="translate(46.319 26.169)"/>
+    <rect id="Rectangle_35" data-name="Rectangle 35" class="cls-1" width="8.898" height="7.72" transform="translate(11.253 40.039)"/>
+    <rect id="Rectangle_36" data-name="Rectangle 36" class="cls-1" width="8.898" height="7.72" transform="translate(22.898 40.039)"/>
+  </g>
+</svg>
