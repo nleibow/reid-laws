@@ -6,7 +6,7 @@ import Vue from 'vue'
 import Calculator from '../Calculator';
 import Carousel from '../Carousel';
 import smoothscroll from 'smoothscroll-polyfill';
-// import Nav from '../modules/nav.js';
+import Nav from '../modules/nav.js';
 
 import Wallop from 'wallop';
 
@@ -51,8 +51,8 @@ setInterval(() =>{
      
 
 /* eslint-disable no-new no-unused*/
-// const nav = new Nav();
-// nav;
+const nav = new Nav();
+nav;
 
 // Vue for calculator
 Vue.config.productionTip = false;

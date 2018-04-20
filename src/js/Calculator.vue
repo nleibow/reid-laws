@@ -84,13 +84,13 @@
                     <div class="facts">
                         <div>
                             <div class="days">
-                                <p>5</p>
+                                <p>{{totalDays}}</p>
                                 <span >DAYS</span>
                              </div> 
                        </div> 
                        <div>    
                             <div class="price">
-                                <p>455</p>
+                                <p>{{totalCost}}</p>
                                 <span class="money">$</span>
                             </div>  
                        </div>     
@@ -139,22 +139,25 @@
                 return (this.halfInchInput*3).toLocaleString();
             },
             co2Reduction: function () {
-                return (this.halfInchCo2Reduction + this. fiveEighthsCo2Reduction).toLocaleString();
+                 return (this.halfInchInput*625).toLocaleString();
             },
             fuelSavings: function () {
-                return (this.halfInchFuelSaving + this. fiveEighthsFuelSaving).toLocaleString();
+                 return (this.halfInchInput*1261.45).toLocaleString();
             },
             carsOffRoad: function () {
-                return Math.round((this.halfInchCo2Reduction + this. fiveEighthsCo2Reduction) / 8320).toLocaleString();
+                 return (this.halfInchInput*2600).toLocaleString();
             },
             flushes: function () {
-                return Math.round((this.halfInchGalReduction + this. fiveEighthsGalReduction) / 1.6).toLocaleString();
+                 return (this.halfInchInput*5).toLocaleString();
             },
             milesNotDriven: function () {
-                return Math.round((this.halfInchFuelSaving + this. fiveEighthsFuelSaving) * 25.4).toLocaleString();
+                return (this.halfInchInput*859.26).toLocaleString();
             },
-            squareFootSum: function () {
-                return (parseInt(this.fiveEighthsInchInput) + parseInt(this.halfInchInput)).toLocaleString();
+            totalCost: function () {
+                  return (this.halfInchInput*1572.81).toLocaleString();
+            },
+            totalDays: function () {
+                  return (this.halfInchInput*2).toLocaleString();
             }
         },
         watch: {

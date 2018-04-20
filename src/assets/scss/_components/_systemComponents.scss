@@ -85,13 +85,19 @@
             
                 &.brand {
                     color: #5F6062;
-                    font-weight: 400;
+                    font-weight: 300;
+                    font-size: 14px;
+                    @include breakpoint (tablet) {
+                        font-size: 16px;
+                    }
                     
                 }
                 &.title {
                     color: $dark-red;
                     @include breakpoint (tablet) {
                         padding: 0 45px;
+                        font-size: 16px;
+                        line-height: 19px;
                     }
                     
                 }

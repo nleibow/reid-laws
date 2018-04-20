@@ -32,6 +32,10 @@ section.calculator-section {
       line-height: 44px;
       letter-spacing: -1px;
     }
+
+    @include breakpoint (large) {
+      font-size: 36px;
+    }
   }
 
   h3:last-of-type {
@@ -44,7 +48,7 @@ section.calculator-section {
   h4 {
     text-align: center;
     color: $dark-red;
-    font-size: 25px;
+    font-size: 26px;
     margin: 0 13px;
     font-weight: 300;
     padding: 0 15px;
@@ -53,6 +57,7 @@ section.calculator-section {
     border-top: 2px solid $dark-gray;
     margin-bottom: 20px;
     padding-top: 20px;
+
   }
 
   p {
@@ -73,8 +78,10 @@ section.calculator-section {
   P:last-of-type {
     font-size: rem-calc(12);
     margin-bottom: 45px;
+    max-width: 850px;
     @include breakpoint (tablet) {
       padding: 0 30px;
+      font-size: rem-calc(14px);
     }
   }
 

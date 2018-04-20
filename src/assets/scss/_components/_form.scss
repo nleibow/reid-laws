@@ -3,17 +3,23 @@ section.form {
   padding: rem-calc(50) rem-calc(20px);
   display: flex;
   text-align: center;
+  @include breakpoint (tablet) {
+    padding: rem-calc(40px) rem-calc(108px);
+  }
 
   & > div {
     @include xy-grid-container(1200px);
     @include xy-grid;
+    @include xy-cell();
     justify-content: center;
 
     & > div {
       @include xy-cell(12);
-      @include breakpoint  (medium) {
-        @include xy-cell (4);
+      @include breakpoint (large) {
+        @include xy-cell(6);
+        text-align: left;
       }
+      
 
       h3 {
         color: #fff;
@@ -21,6 +27,10 @@ section.form {
         margin-bottom: rem-calc(32);
         font-weight: 300;
         line-height: 40px;
+        @include breakpoint (large) {
+          max-width: 315px;
+          
+        }
       }
 
       a {
@@ -28,13 +38,14 @@ section.form {
           margin: 0 auto;
           display: inline-block;
           font-weight: 400;
-          font-size: 14px;
+          font-size: rem-calc(14px);
           line-height: 44px;
-          padding: 0px 30px;
+          padding: 0px 60px;
           background: #C41230;
           border-radius: 25px;
           color: #fff;
           margin-bottom: 40px;
+          min-width: 234px;
         }
       }
 
@@ -68,10 +79,10 @@ section.form {
       padding: 0px 0px;
       text-align: center;
       margin-top: 30px;
-      @include xy-cell(12)
+      @include xy-cell(12);
 
       @include breakpoint (tablet) {
-        @include xy-cell(6);
+        @include xy-cell(12);
         }
 
       @include breakpoint(large) {
@@ -116,8 +127,6 @@ section.form {
         width: 100% !important;
         font-family: 'Montserrat', sans-serif !important;
 
-        width: 75%!important;
-
         label.mktoLabel {
           color: #777777!important;
           font-size: 0.85em!important;
@@ -127,6 +136,11 @@ section.form {
         input[type=text], textarea, input[type=email] {
           width: 100% !important;
           font-weight: 400 !important;
+          height: 35px;
+          border: 1px solid #707070;
+        }
+        #InformationRequested {
+          height: 115px;
         }
         .mktoButtonRow {
           display: block!important;
@@ -147,23 +161,21 @@ section.form {
         }
 
         button.mktoButton {
-          border-radius: 0;
-          border: 0;
-          padding: rem-calc(18 48);
-          font-weight: 500;
-          font-size: 12px;
-          text-transform: uppercase;
+          margin: 0 auto;
+          margin-top: 20px;
+          display: inline-block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 44px;
+          padding: 0px 60px;
+          background: #C41230;
+          border-radius: 25px;
+          color: #fff;
           cursor: pointer;
+          border: none !important;
+          min-width: 234px;
 
-          background: $medium-gray;
-          border: 2px solid $primary-color;
-          color: $btn-gray;
-
-          &:hover {
-            background: $primary-color;
-            border: 2px solid $primary-color;
-            color: $white;
-          }
+          
         }
       }
 

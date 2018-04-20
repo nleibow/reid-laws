@@ -7,6 +7,7 @@ const Nav = () => {
     });
 
     elementsReverse.shift();
+    elementsReverse.pop();
 
     function stuck(nav) {
         nav.classList.add("stuck");
@@ -16,20 +17,26 @@ const Nav = () => {
         document.querySelector('a[href="' + elementsReverse[elementsReverse.length - 2] + '"]').classList.remove("active");
         nav.classList.remove("stuck")
     }
-
 // Adds active state on scroll
     document.addEventListener("scroll", () => {
         const scrollLocation = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const nav = document.querySelector(".navigation");
 
-        for (let i = 0; i < elementsReverse.length - 1; i++) {
+        for (let i = 0; i < elementsReverse.length ; i++) {
             let el = document.querySelector(elementsReverse[i]);
             let elementScrollLocation = el.offsetTop - scrollLocation;
             if (elementScrollLocation < 200 && (-el.offsetHeight) < elementScrollLocation - 100) {
-                for (let i = 0; i < elementsReverse.length - 1; i++) {
+                for (let i = 0; i < elementsReverse.length ; i++) {
+                    window.console.log( elementsReverse[i]);
+                    window.console.log(-el.offsetHeight, "-el offset");
+                    window.console.log(elementScrollLocation - 100, "-scrollLocation");
                     document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.remove("active");
                 }
                 document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.add("active");
+            }
+
+            if(elementScrollLocation > 90) {
+                document.querySelector('nav a[href="' + elementsReverse[2] + '"]').classList.remove("active");
             }
         }
 
@@ -55,7 +62,7 @@ const Nav = () => {
 
     // Mobile Nav
     document.getElementById('hamburger').addEventListener("click", toggleNav);
-    document.getElementById('close-btn').addEventListener("click", toggleNav);
+    document.getElementById('close-x').addEventListener("click", toggleNav);
 
     function toggleNav() {
         let nav = document.getElementById('nav');
@@ -63,11 +70,13 @@ const Nav = () => {
             if (!nav.classList.contains("show")){
                 nav.classList.add('show');
                 document.body.style.overflow = 'hidden';
-                document.getElementById('hamburger').style.display = 'none';
+                document.getElementById('hamburger').classList.add("hide");
+                document.getElementById('close-x').classList.add("show");
             }else {
                 nav.classList.remove('show');
                 document.body.style.overflow = 'auto';
-                document.getElementById('hamburger').style.display = '';
+                document.getElementById('hamburger').classList.remove("hide");
+                document.getElementById('close-x').classList.remove("show");
             }
         } else {
             nav.classList.remove('show');
@@ -77,7 +86,7 @@ const Nav = () => {
 
     //Resize for mobile and desktop nav
     window.addEventListener("resize", () => {
-        if(window.innerWidth < 760) {
+        if(window.innerWidth < 768) {
             document.getElementById('nav').classList.remove('show');
             document.getElementById('hamburger').style.display = '';
             document.body.style.overflow = 'auto';
@@ -89,3 +98,4 @@ const Nav = () => {
 }
 
 export default Nav
+ 

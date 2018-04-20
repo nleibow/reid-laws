@@ -5,7 +5,7 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG’s Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
@@ -22,7 +22,7 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG’s Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
@@ -41,7 +41,7 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG’s Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
@@ -59,7 +59,7 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG’s Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
