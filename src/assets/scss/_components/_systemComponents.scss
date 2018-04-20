@@ -4,8 +4,7 @@
     text-align: center;
     padding-bottom: 60px;
     @include breakpoint (tablet) {
-        padding: 0 40px;
-
+        padding: 0 40px 60px;
     }
     @include breakpoint (large) {
         padding: 0 90px;
