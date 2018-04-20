@@ -37,8 +37,7 @@
                 </div>
                 <div class="labor">
                     <div class="left">
-                        <p>{{co2Reduction}}</p>
-                        <span class="money">$</span>
+                        <p class="money">{{co2Reduction}}</p>
                        <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -48,8 +47,7 @@
                         <span>LABOR COSTS</span>
                     </div>
                     <div class="right">
-                        <p>{{carsOffRoad}}</p>
-                         <span class="money">$</span>
+                        <p class="money">{{carsOffRoad}}</p>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
@@ -57,8 +55,7 @@
                 </div>
                 <div class="materials">
                     <div class="left">
-                        <p>{{fuelSavings}}</p>
-                        <span class="money">$</span>
+                        <p class="money">{{fuelSavings}}</p>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -68,8 +65,7 @@
                          <span>MATERIALS COSTS</span>
                     </div>
                     <div class="right">
-                        <p>{{milesNotDriven}}</p>
-                         <span class="money">$</span>
+                        <p class="money">{{milesNotDriven}}</p>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
@@ -90,8 +86,7 @@
                        </div> 
                        <div>    
                             <div class="price">
-                                <p>{{totalCost}}</p>
-                                <span class="money">$</span>
+                                <p class="money">{{totalCost}}</p>
                             </div>  
                        </div>     
                     </div>       
@@ -136,28 +131,28 @@
                 return Math.round((this.halfInchInput/1000)*0.177);
             },
             galReduction: function () {
-                return (this.halfInchInput*3).toLocaleString();
+                return Math.round(this.halfInchInput*3).toLocaleString();
             },
             co2Reduction: function () {
-                 return (this.halfInchInput*625).toLocaleString();
+                 return Math.round(this.halfInchInput*625).toLocaleString();
             },
             fuelSavings: function () {
-                 return (this.halfInchInput*1261.45).toLocaleString();
+                 return Math.round(this.halfInchInput*1261.45).toLocaleString();
             },
             carsOffRoad: function () {
-                 return (this.halfInchInput*2600).toLocaleString();
+                 return Math.round(this.halfInchInput*2600).toLocaleString();
             },
             flushes: function () {
-                 return (this.halfInchInput*5).toLocaleString();
+                 return Math.round(this.halfInchInput*5).toLocaleString();
             },
             milesNotDriven: function () {
-                return (this.halfInchInput*859.26).toLocaleString();
+                return Math.round(this.halfInchInput*859.26).toLocaleString();
             },
             totalCost: function () {
-                  return (this.halfInchInput*1572.81).toLocaleString();
+                  return Math.round(this.halfInchInput*1572.81).toLocaleString();
             },
             totalDays: function () {
-                  return (this.halfInchInput*2).toLocaleString();
+                  return Math.round(this.halfInchInput*2).toLocaleString();
             }
         },
         watch: {

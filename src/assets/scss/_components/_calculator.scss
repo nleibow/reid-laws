@@ -248,6 +248,7 @@ section.calculator-section {
           position: relative;
           margin: 0;
           margin-top: 15px;
+          text-align: center;
           
           @include breakpoint (tablet) {
             @include xy-cell(4);
@@ -261,6 +262,9 @@ section.calculator-section {
             height: 40px;
             margin: 0;
             margin-top: 15px;
+            position: relative;
+            display: inline-block;
+            width: auto;
             &.brand {
               font-size: rem-calc(12px);
               color: $light-gray;
@@ -270,6 +274,16 @@ section.calculator-section {
               @include breakpoint (tablet) {
                 padding: 0px;
               }
+            }
+            &.money:before {
+             content: '$';
+             display: inline-block;
+             position: absolute;
+             left: -10px;
+             top: -25px;
+             height: 7px;
+             font-size: 12px;
+             widows: 7px;
             }
           }
 
@@ -285,17 +299,7 @@ section.calculator-section {
               bottom: 50px;
             }
 
-            &.money {
-              position: absolute;
-              right: 0;
-              left: -56px;
-              top: 0;
-              
-              @include breakpoint (tablet) {
-                left: 0px; 
-                right: 76px;     
-              }
-            }
+          
           }
         }
 

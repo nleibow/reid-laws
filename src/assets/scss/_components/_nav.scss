@@ -31,6 +31,7 @@ section.navigation {
     align-items: center;
     height: rem-calc(35px);
     width: 100%;
+    padding: 20px 0;
 
 
     a {
@@ -185,6 +186,10 @@ section.navigation {
         min-width: 9.2rem;
         height: 100%;
 
+        &.hover {
+          background-color: white;
+        }
+
           .medium {
             display: none;
             @include breakpoint (tablet) {
@@ -222,7 +227,7 @@ section.navigation {
           }
           @include breakpoint (large) {
             height: 74px;
-            width: 75%;
+            width: 100%;
           }
         }
       }
@@ -247,12 +252,19 @@ section.navigation {
           background-color: $dark-red;
           color: $white;
           transition: background-color 350ms ease-in-out;
+          
         }
+        
       }
       &.desktop-usg:hover {
         background: none;
       }
     }
+    a#backNav {
+      &:hover {
+        background-color: #fff;
+      }
+           }
   }
 
   &.stuck {

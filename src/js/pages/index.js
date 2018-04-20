@@ -18,7 +18,7 @@ slider;
 window.slider = slider;
 setInterval(() =>{
     slider.next();
-}, 4000)  
+}, 15000)  
 
 
   var paginationDots = Array.prototype.slice.call(document.querySelectorAll('.Wallop-dot'));
