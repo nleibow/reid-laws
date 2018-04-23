@@ -80,7 +80,7 @@
                     <div class="facts">
                         <div>
                             <div class="days">
-                                <p :class="{fontShrinkOne: fontShrinkOne}">{{totalDays}}</p>
+                                <p :class="{fontShrinkOne: fontShrinkOne}" class="days">{{totalDays}}</p>
                                 <span >DAYS</span>
                              </div> 
                        </div> 
