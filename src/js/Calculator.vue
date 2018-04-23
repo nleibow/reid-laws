@@ -74,14 +74,14 @@
                 <div class="results">
                     <p class="title">
                         TOTAL SAVINGS WITH 
-                        USG&nbsp;DUROCK™&nbsp;BRAND&nbsp;INFINITY&nbsp;DRAIN®
+                        USG DUROCK™ BRAND INFINITY DRAIN®
                         SHOWER SYSTEM
                     </p> 
                     <div class="facts">
                         <div>
                             <div class="days">
-                                <p :class="{fontShrinkOne: fontShrinkOne}" class="days">{{totalDays}}</p>
-                                <span >DAYS</span>
+                                <p :class="{fontShrinkOne: fontShrinkOne}" >{{totalDays}}</p>
+                               
                              </div> 
                        </div> 
                        <div>    
@@ -93,7 +93,9 @@
                 </div>    
             </section>
         </div>
+        <p class="disclaimer"> *Includes time for mortar to cure and flood testing.</p>
     </div>
+     
 </template>
 <script>
     import calendar from "../assets/img/calendar.svg";

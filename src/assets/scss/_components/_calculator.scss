@@ -266,7 +266,10 @@ section.calculator-section {
             margin: 0;
             margin-top: 15px;
             position: relative;
-            display: inline-block;
+            display: block;
+            @include breakpoint (tablet) {
+              display: inline-block;
+            }
             width: auto;
             &.brand {
               font-size: rem-calc(12px);
@@ -281,7 +284,8 @@ section.calculator-section {
             }
            
             .money {
-              @include breakpoint (small) {
+              display: block;
+              @include breakpoint (medium) {
                 display: inline-block;
               }
             }
@@ -294,6 +298,14 @@ section.calculator-section {
              height: 7px;
              font-size: 12px;
              widows: 7px;
+             @include breakpoint (medium) {
+              left: 200px;
+
+            }
+            @include breakpoint (tablet) {
+              left: -10px;
+
+            }
             }
           }
 
@@ -348,6 +360,8 @@ section.calculator-section {
           }
         }
 
+        
+
         .results {
           @include xy-grid();
           background-color: $dark-red;
@@ -360,7 +374,7 @@ section.calculator-section {
             color: #fff;
             
             @include breakpoint (tablet) {
-              @include xy-cell(6);
+              @include xy-cell(4);
               margin: 0;
             }
           }
@@ -371,7 +385,7 @@ section.calculator-section {
             padding: 0;
             margin: 0;
             @include breakpoint (tablet) {
-              @include xy-cell(6);
+              @include xy-cell(8);
               justify-content: center;
               padding-top: 10px;
           
@@ -383,7 +397,6 @@ section.calculator-section {
               @include breakpoint (tablet) {
                 @include xy-cell(4);
                 padding-right: 75px;
-                margin-left: 40px;
               }
               div {
                 position: relative;
@@ -400,7 +413,7 @@ section.calculator-section {
                     }
                     span {
                       position: absolute;
-                      left: 95px;
+                      left: 140px;
                       top: 10px;
                       color: #fff;
                       font-weight: 300;
@@ -411,9 +424,20 @@ section.calculator-section {
                       }
                     }
                   }
-                  &.price {
-                    .money {
-                      font-size: 40px;
+                  &.days {
+                    p {
+                      &:after {
+                        content: 'DAYS';
+                        display: inline-block;
+                        position: absolute;
+                        right: -80px;
+
+                        top: 10;
+                        height: 7px;
+                        color: white;
+                        font-size: 13px;
+                        widows: 7px;
+                        }
                     }
                   }
                   &.price {
@@ -433,15 +457,11 @@ section.calculator-section {
                       }
                     }
                     &:before {
-                         
                       content: '$';
                       display: inline-block;
                       position: absolute;
-                      @include breakpoint (mobile) {
-                        left: -10px;   
-                      }
-                      left: 15px; 
-                      top: -0px;
+                      left: -10px;
+                      top: -25px;
                       height: 7px;
                       color: white;
                       font-size: 12px;
@@ -478,5 +498,10 @@ section.calculator-section {
         }
       }
     }
+  }
+  .disclaimer {
+    margin: 0 auto;
+    max-width: none;
+    position: absolute;
   }
 }
