@@ -10,7 +10,7 @@
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
                 </div>
-                <a href="javascript:void(0)">
+                <a @click="scrollToBenefits" href="javascript:void(0)">
                     SEE THE BENEFITS 
                 </a>
                 <figure class="usg-logo" v-html="usgLogo">
@@ -27,7 +27,7 @@
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
                 </div>
-                <a  class="calc" href="javascript:void(0)">
+                <a @click="scrollToCalc" href="javascript:void(0)">
                     CALCULATE YOUR COST &amp; TIME SAVINGS
                 </a>   
                 <figure class="usg-logo" v-html="usgLogo">
@@ -64,7 +64,7 @@
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
                 </div>
-                <a id="calcBtn2" href="javascript:void(0)">
+                <a id="calc2" href="javascript:void(0)">
                     SEE THE BENEFITS 
                 </a>
                 <figure class="usg-logo" v-html="usgLogo">
@@ -77,6 +77,12 @@
 
     import usgLogo from "../assets/img/usg-logo-mobile.svg";
     import heroType from "../assets/img/hero-type.svg";
+    import smoothScroll from 'smoothscroll-polyfill';
+
+    // Smooth Scroll
+    window.__forceSmoothScrollPolyfill__ = true;
+    smoothScroll.polyfill();
+
     export default {
         name: 'Carousel',
         props: [
@@ -87,8 +93,6 @@
                 usgLogo: usgLogo,
                 heroType: heroType,
                 architect: true,
-                
-             
             }
         },
         beforeMount: function (){
@@ -102,6 +106,16 @@
         },
         mounted: function () {
              window.slider.reset();
+        },
+        methods: {
+            scrollToBenefits: function () {
+                const scrollToElement = document.querySelector("#ProductBenefits");
+                window.scroll({top: scrollToElement.offsetTop - 75, behavior: 'smooth'});
+            },
+            scrollToCalc: function () {
+                const scrollToElement = document.querySelector("#Downloads");
+                window.scroll({top: scrollToElement.offsetTop - 75, behavior: 'smooth'});
+            }
         }
     }
 </script>
