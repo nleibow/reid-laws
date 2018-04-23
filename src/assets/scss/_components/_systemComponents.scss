@@ -39,7 +39,7 @@
             @include xy-cell (12);
             color: #C41230;
             font-size: rem-calc(30px);
-            font-weight: 600;
+            font-weight: 700;
             line-height: 36px;
 
             @include breakpoint (tablet) {
