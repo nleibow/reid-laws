@@ -74,7 +74,7 @@
                 <div class="results">
                     <p class="title">
                         TOTAL SAVINGS WITH 
-                        USG DUROCK™ BRAND INFINITY DRAIN®
+                        USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN®
                         SHOWER SYSTEM
                     </p> 
                     <div class="facts">
