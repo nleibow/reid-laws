@@ -52,7 +52,7 @@ const Nav = () => {
     // Smooth scrolls page on nav click
     [].forEach.call(document.querySelectorAll("nav a"), (elem) => {
         elem.addEventListener('click', (e) => {
-            if (!(elem.getAttribute('href').indexOf('http') > -1)) {
+            if (!(elem.getAttribute('href').indexOf('http') > -1) && !(elem.getAttribute('href').indexOf('pdf') > -1)) {
                 e.preventDefault();
                 toggleNav();
                 const scrollToElement = document.querySelector(elem.getAttribute('href'));
