@@ -5,7 +5,7 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Brand Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
@@ -22,12 +22,12 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Brand Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
                 </div>
-                <a href="javascript:void(0)">
+                <a  class="calc" href="javascript:void(0)">
                     CALCULATE YOUR COST &amp; TIME SAVINGS
                 </a>   
                 <figure class="usg-logo" v-html="usgLogo">
@@ -41,12 +41,12 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Brand Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
                 </div>
-                <a href="javascript:void(0)">
+                <a id="calcBtn2" href="javascript:void(0)">
                     CALCULATE YOUR COST &amp; TIME SAVINGS
                 </a>   
                 <figure class="usg-logo" v-html="usgLogo">
@@ -59,12 +59,12 @@
                 <figure class="hero-type" v-html="heroType">
                 </figure>    
                 <div>
-                    Compared to a traditional mud bed, USG Durock™ Shower System
+                    Compared to a traditional mud bed, USG Durock™ Brand Shower System
                     provides enhanced moisture and mold protection, allows for complete
                     design customization and delivers significant cost and time savings.
                     And those are benefits that are always in style. 
                 </div>
-                <a href="javascript:void(0)">
+                <a id="calcBtn2" href="javascript:void(0)">
                     SEE THE BENEFITS 
                 </a>
                 <figure class="usg-logo" v-html="usgLogo">

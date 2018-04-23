@@ -8,6 +8,7 @@ const Nav = () => {
 
     elementsReverse.shift();
     elementsReverse.pop();
+    window.console.log(elementsReverse);
 
     function stuck(nav) {
         nav.classList.add("stuck");
@@ -95,7 +96,18 @@ const Nav = () => {
             document.body.style.overflow = 'auto';
         }
     });
+setTimeout( () => {
+    const navBtn2 = document.getElementById('calcBtn2');
+    const navBtn1 = document.getElementById('calcBtn1');
+    navBtn1.addEventListener('click',  ()=> {
+        window.console.log('works')
+    });
+    navBtn2.addEventListener('click',  ()=> {
+        window.console.log('works')
+    });
+}, 300)
 }
+
 
 export default Nav
  

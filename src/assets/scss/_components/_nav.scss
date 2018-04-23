@@ -234,7 +234,7 @@ section.navigation {
 
       &.last {
         @include breakpoint(tablet) {
-          max-width: rem-calc(124px);
+          
         }
       }
 

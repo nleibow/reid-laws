@@ -17,7 +17,7 @@
             <section class="outputs">
                 <div class="days">
                     <div class="left">
-                        <p>{{galReduction}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{galReduction}}</p>
                         <span>DAYS</span>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
@@ -28,7 +28,7 @@
                          <span>TOTAL NUMBER OF DAYS<sup>*</sup></span>
                     </div>
                     <div class="right">
-                        <p>{{flushes}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{flushes}}</p>
                         <span>DAYS</span>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
@@ -37,7 +37,7 @@
                 </div>
                 <div class="labor">
                     <div class="left">
-                        <p class="money">{{co2Reduction}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{co2Reduction}}</p>
                        <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -47,7 +47,7 @@
                         <span>LABOR COSTS</span>
                     </div>
                     <div class="right">
-                        <p class="money">{{carsOffRoad}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{carsOffRoad}}</p>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
@@ -55,7 +55,7 @@
                 </div>
                 <div class="materials">
                     <div class="left">
-                        <p class="money">{{fuelSavings}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{fuelSavings}}</p>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -65,7 +65,7 @@
                          <span>MATERIALS COSTS</span>
                     </div>
                     <div class="right">
-                        <p class="money">{{milesNotDriven}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
@@ -80,13 +80,13 @@
                     <div class="facts">
                         <div>
                             <div class="days">
-                                <p>{{totalDays}}</p>
+                                <p :class="{fontShrinkOne: fontShrinkOne}">{{totalDays}}</p>
                                 <span >DAYS</span>
                              </div> 
                        </div> 
                        <div>    
                             <div class="price">
-                                <p class="money">{{totalCost}}</p>
+                                <p :class="{fontShrinkOne: fontShrinkOne}" class="money">{{totalCost}}</p>
                             </div>  
                        </div>     
                     </div>       
@@ -118,6 +118,7 @@
                 previousFiveEighthsInch: 0,
                 halfInchActive: false,
                 fiveEigthsActive: false,
+                fontShrinkOne: false,
             }
         },
         computed: {
@@ -163,11 +164,11 @@
                     val = val.substring(1, _val.length);
                 }
 
-                if(val.length < 9) {
+                if(val.length < 5) {
                     if(isNaN(val) || val == "") {
                         this.halfInchInput = 0;
                     } else if(reg.test(val)) {
-                        if(val.length > 7) {
+                        if(val.length > 4) {
                             val = this.toScientific(val);
                             this.previousHalfInch = val;
                             this.halfInchInput = val;
@@ -183,34 +184,13 @@
                     // window.console.log(val);
                     this.halfInchInput = this.previousHalfInch;
                 }
-            },
-            fiveEighthsInchInput: function(_val) {
-                let val = _val.toString();
+                if (val.length>3 ){
+                    this.fontShrinkOne = true}
 
-                if(val[0] == 0 && val.length > 1) {
-                    val = val.substring(1, _val.length);
-                }
 
-                if(val.length < 11) {
-                    if(isNaN(val)) {
-                        this.fiveEighthsInchInput = 0;
-                    } else if(reg.test(val)) {
-                        if(val.length > 7) {
-                            val = this.toScientific(val);
-                            this.previousFiveEighthsInch = val;
-                            this.fiveEighthsInchInput = val;
-                        } else {
-                            this.previousFiveEighthsInch = parseInt(val);
-                            this.fiveEighthsInchInput = parseInt(val);
-                        }
-                    } else {
-                        this.fiveEighthsInchInput = this.previousFiveEighthsInch;
-                    }
-                } else {
-                    this.fiveEighthsInchInput = this.previousFiveEighthsInch;
-                }
-            }
+                }        
         },
+            
         methods: {
             toScientific: function (num) {
                 return parseFloat(num);

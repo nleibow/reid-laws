@@ -19,6 +19,7 @@
                 padding: 0 20px;
                 font-size: 15px;
                 font-weight: 400;
+                text-shadow: 3px 1px #000000;
                 @include breakpoint (tablet) {
                     padding: 0;
                 }
@@ -69,14 +70,20 @@
     }
     .architect {
         background-image: url(../img/hero-architect.jpg);
-        background-position: left;
+        background-position: right;
         align-items: flex-end;
+        height: 768px;
+
         
     }
     .contractor {
         background-image: url(../img/hero-contractor.jpg);
         background-position: center;
         align-content: flex-start;
+        height: 756px;
+        @include breakpoint (tablet){
+            height: 768px;
+        }
         
     }
 }
