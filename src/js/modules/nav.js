@@ -15,8 +15,10 @@ const Nav = () => {
     }
 
     function unstuck(nav) {
-        document.querySelector('a[href="' + elementsReverse[elementsReverse.length - 2] + '"]').classList.remove("active");
-        nav.classList.remove("stuck")
+        if(window.innerWidth > 1023) {
+            document.querySelector('a[href="' + elementsReverse[elementsReverse.length - 2] + '"]').classList.remove("active");
+            nav.classList.remove("stuck")
+        }
     }
 
 // Adds active state on scroll
@@ -27,18 +29,20 @@ const Nav = () => {
         for (let i = 0; i < elementsReverse.length; i++) {
             let el = document.querySelector(elementsReverse[i]);
             let elementScrollLocation = el.offsetTop - scrollLocation;
+
+
             if (elementScrollLocation < 200 && (-el.offsetHeight) < elementScrollLocation - 100) {
                 for (let i = 0; i < elementsReverse.length; i++) {
-                    window.console.log(elementsReverse[i]);
-                    window.console.log(-el.offsetHeight, "-el offset");
-                    window.console.log(elementScrollLocation - 100, "-scrollLocation");
                     document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.remove("active");
                 }
+                window.console.log(document.querySelector('nav a[href="' + elementsReverse[i] + '"]'))
                 document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.add("active");
             }
 
-            if (elementScrollLocation > 90) {
-                document.querySelector('nav a[href="' + elementsReverse[2] + '"]').classList.remove("active");
+            if (scrollLocation < 400) {
+                for (let i = 0; i < elementsReverse.length; i++) {
+                    document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.remove("active");
+                }
             }
         }
 
