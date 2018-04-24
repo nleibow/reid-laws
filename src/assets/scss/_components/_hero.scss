@@ -8,6 +8,7 @@
         
 
         .container {
+            height: 460px;
             @include breakpoint(tablet) {
                 @include xy-cell(6);
                 margin-bottom: 120px;
@@ -59,7 +60,7 @@
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 44px;
-                padding: 0px 30px;
+                padding: 5px 30px;
                 background: #C41230;
                 border-radius: 25px;
                 color: #fff;
@@ -69,20 +70,29 @@
         }
     }
     .architect {
-        background-image: url(../img/hero-architect.jpg);
-        background-position: right;
-        align-items: flex-end;
-        height: 768px;
+        background-image: url(../img/hero-mobile-architect.jpg);
+        
+            @include breakpoint (medium){
+                height: 768px;
+                background-image: url(../img/hero-architect.jpg);
+                background-position: center;
+                align-content: flex-start;
+               
+                }
+           
+            }
 
         
-    }
+    
     .contractor {
+        background-image: url(../img/hero-mobile-contractor.jpg);
+
+        @include breakpoint (medium){
+        height: 768px;
         background-image: url(../img/hero-contractor.jpg);
         background-position: center;
         align-content: flex-start;
-        height: 756px;
-        @include breakpoint (tablet){
-            height: 768px;
+       
         }
         
     }
