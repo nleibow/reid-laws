@@ -7,6 +7,21 @@ section.form {
     padding: rem-calc(40px) rem-calc(108px);
   }
 
+
+  label {
+    display: none;
+  }
+
+  #informationRequested2{
+    min-height: 115px;
+    &::placeholder {
+      font-size: 16px;
+      padding-left: 35px;
+      font-weight: 500;
+    }
+    
+  }
+
   & > div {
     @include xy-grid-container(1200px);
     @include xy-grid;
@@ -111,7 +126,6 @@ section.form {
       }
       input[type=text], textarea, input[type=email] {
         width: 100%;
-        margin-bottom: 15px/* 0px */;
         padding: 10px 16px !important;
         resize: none;
         border: none;
@@ -127,11 +141,12 @@ section.form {
         width: 100% !important;
         font-family: 'Montserrat', sans-serif !important;
 
+        
+
         label.mktoLabel {
           color: #777777!important;
           font-size: 0.85em!important;
           font-weight: 300!important;
-          margin-bottom: 4px!important;
         }
         input[type=text], textarea, input[type=email] {
           width: 100% !important;
@@ -150,8 +165,13 @@ section.form {
           margin-left: 0px !important;
 
         }
+        .mktoOffset{
+          display: none;
+        }
         .mktoFormCol {
           width: 100% !important;
+          height: 50px !important;
+          margin-bottom: 0px !important;
         }
         .mktoFieldWrap {
           width: 100% !important;
@@ -162,7 +182,7 @@ section.form {
 
         button.mktoButton {
           margin: 0 auto;
-          margin-top: 20px;
+          margin-top: 100px;
           display: inline-block;
           font-weight: 400;
           font-size: 14px;
@@ -176,6 +196,13 @@ section.form {
           min-width: 234px;
 
           
+        }
+        input {
+          &::placeholder {
+            font-size: 16px;
+            padding-left: 35px;
+            font-weight: 500;
+          }
         }
       }
 
