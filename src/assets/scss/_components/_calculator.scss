@@ -431,12 +431,14 @@ section.calculator-section {
                         display: inline-block;
                         position: absolute;
                         right: -80px;
-
-                        top: 10;
+                        top: 15px;
                         height: 7px;
                         color: white;
                         font-size: 13px;
                         widows: 7px;
+                        @include breakpoint (tablet) {
+                          top: 45px;
+                        }
                         }
                     }
                   }

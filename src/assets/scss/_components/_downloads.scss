@@ -19,6 +19,8 @@ section.downloads {
   h3 {
     color: #C41230;
     font-size: rem-calc(32);
+    text-align: center;
+
   }
 
   p {
@@ -105,7 +107,7 @@ section.downloads {
 
     &.title-bold {
       font-size: rem-calc(14px);
-      font-weight: 700;
+      font-weight: 300;
       margin-bottom: rem-calc(20px);
       max-width: 225px;
       margin: 0 auto;

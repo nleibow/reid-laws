@@ -74,7 +74,7 @@
                 <div class="results">
                     <p class="title">
                         TOTAL SAVINGS WITH 
-                        USG DUROCK™ BRAND INFINITY DRAIN®
+                        USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup>
                         SHOWER SYSTEM
                     </p> 
                     <div class="facts">
@@ -187,7 +187,12 @@
                     this.halfInchInput = this.previousHalfInch;
                 }
                 if (val.length>3 ){
-                    this.fontShrinkOne = true}
+                    this.fontShrinkOne = true
+                    }
+
+                    else {
+                        this.fontShrinkOne = false
+                    }
 
 
                 }        
