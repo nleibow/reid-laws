@@ -135,7 +135,10 @@ module.exports = {
             includes: [path.join(__appDir, 'node_modules/foundation-sites/scss')]
         },
         fileLoader: {
-            relativeAssetsPath: '../'
+            relativeAssetsPath: '../',
+            fileLoaderFiles: [
+                /\.pdf$/,
+            ]
         },
         urlLoader: {
             processImages: true,
