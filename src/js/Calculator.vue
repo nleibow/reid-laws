@@ -186,7 +186,7 @@
                     // window.console.log(val);
                     this.halfInchInput = this.previousHalfInch;
                 }
-                if (val.length>3 ){
+                if (val.length>2 ){
                     this.fontShrinkOne = true
                     }
 
