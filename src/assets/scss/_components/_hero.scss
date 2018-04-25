@@ -9,7 +9,7 @@
 
         .container {
             height: 460px;
-            @include breakpoint(tablet) {
+            @media (min-width: 874px) {
                 @include xy-cell(6);
                 margin-bottom: 120px;
             }
@@ -72,12 +72,17 @@
     .architect {
         background-image: url(../img/hero-mobile-architect.jpg);
         height: 768px;
-            @include breakpoint (tablet){
+        @media (min-width: 874px){
                 height: 768px;
                 background-image: url(../img/hero-architect.jpg);
-                background-position: center;
+                background-position: unset;
                 align-content: flex-start;
                
+                }
+                .container {
+                    @media (min-width: 874px){
+                        margin-left: 48%;
+                    }
                 }
            
             }
@@ -87,10 +92,10 @@
     .contractor {
         background-image: url(../img/hero-mobile-contractor.jpg);
         height: 768px;
-        @include breakpoint (tablet){
+        @media (min-width: 874px){
         height: 768px;
         background-image: url(../img/hero-contractor.jpg);
-        background-position: center;
+        background-position: unset;
         align-content: flex-start;
        
         }

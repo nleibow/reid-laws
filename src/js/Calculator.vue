@@ -17,7 +17,7 @@
             <section class="outputs">
                 <div class="days">
                     <div class="left">
-                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{galReduction}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{galReduction.toLocaleString()}}</p>
                         <span>DAYS</span>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
@@ -28,7 +28,7 @@
                          <span>TOTAL NUMBER OF DAYS<sup>*</sup></span>
                     </div>
                     <div class="right">
-                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{flushes}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{flushes.toLocaleString()}}</p>
                         <span>DAYS</span>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
@@ -39,7 +39,7 @@
                 
                 <div class="labor">
                     <div class="left">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{co2Reduction}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{co2Reduction.toLocaleString()}}</p>
                        <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -49,7 +49,7 @@
                         <span>LABOR COSTS</span>
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{carsOffRoad}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{carsOffRoad.toLocaleString()}}</p>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
@@ -57,7 +57,7 @@
                 </div>
                 <div class="materials">
                     <div class="left">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{fuelSavings}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{fuelSavings.toLocaleString()}}</p>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -67,7 +67,7 @@
                          <span>MATERIALS COSTS</span>
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven.toLocaleString()}}</p>
                         <p class="brand">
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
@@ -87,12 +87,12 @@
                         </p> 
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost.toLocaleString()}}</p>
                     </div>
                 </div>
                 <div class="materials red">
                     <div class="left"> 
-                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays.toLocaleString()}}</p>
                         <span>DAYS</span>
                     </div>
                     <div class="center">
@@ -101,7 +101,7 @@
                         </p> 
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal.toLocaleString()}}</p>
                     </div>
                 </div>
             </section>

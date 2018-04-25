@@ -15,10 +15,10 @@ const wallopEl = document.querySelector('.Wallop');
 const slider = new Wallop(wallopEl, {carousel: true});
 slider;
 
-window.slider = slider;
-setInterval(() =>{
-    slider.next();
-}, 15000)  
+// window.slider = slider;
+// setInterval(() =>{
+//     slider.next();
+// }, 15000)  
 
 
   var paginationDots = Array.prototype.slice.call(document.querySelectorAll('.Wallop-dot'));
