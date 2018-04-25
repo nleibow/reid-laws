@@ -171,7 +171,7 @@
                   return Math.round(this.halfInchInput*2).toLocaleString();
             },
             usgCost: function () {
-                 return Math.round((this.halfInchInput*1261.45)-(this.co2Reduction)).toLocaleString();
+                 return Math.round((this.halfInchInput*1261.45)+(this.co2Reduction)).toLocaleString();
             },
             vinylCost: function () {
                  return Math.round((this.halfInchInput*859.26)+(this.carsOffRoad)).toLocaleString();
