@@ -76,7 +76,7 @@
 
                 <div class="materials red">
                     <div class="left"> 
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{usgCost}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{usgCost.toLocaleString()}}</p>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -87,10 +87,7 @@
                         </p> 
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost}}</p>
-                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
-                        </p>    
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal}}</p>
                     </div>
                 </div>
                 <div class="materials red">
@@ -174,10 +171,13 @@
                   return Math.round(this.halfInchInput*2).toLocaleString();
             },
             usgCost: function () {
-                 return Math.round((this.halfInchInput*1261.45)+(this.co2Reduction)).toLocaleString();
+                 return Math.round((this.halfInchInput*1261.45)+(this.co2Reduction));
             },
             vinylCost: function () {
-                 return Math.round((this.halfInchInput*859.26)+(this.carsOffRoad)).toLocaleString();
+                 return Math.round((this.halfInchInput*859.26)+(this.carsOffRoad))
+            },
+             vinylFinal: function () {
+                return Math.round((parseInt(this.vinylCost))-(parseInt(this.usgCost))).toLocaleString();
             }
         },
         watch: {
