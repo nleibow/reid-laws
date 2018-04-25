@@ -355,8 +355,26 @@ section.calculator-section {
           background: rgb(248, 248, 248);
           padding: 20px 20px;
           margin-top: 10px;
+          position: relative;
           svg {
             margin-bottom: 10px;
+          }
+          &.red {
+            background-color: $dark-red;
+           .center {
+             p {
+              color: #fff;
+              font-size: 17px;
+              font-weight: 600;
+             }
+           }
+             p{
+              color: #fff;
+             
+            }
+            span {
+              color: #fff;
+            }
           }
         }
 
@@ -503,6 +521,7 @@ section.calculator-section {
   }
   .disclaimer {
     margin: 0 auto;
+    top: 142px;
     max-width: none;
     position: absolute;
   }
