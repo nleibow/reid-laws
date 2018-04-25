@@ -87,7 +87,7 @@
                         </p> 
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost}}</p>
                     </div>
                 </div>
                 <div class="materials red">
@@ -101,7 +101,7 @@
                         </p> 
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal}}</p>
                     </div>
                 </div>
             </section>
