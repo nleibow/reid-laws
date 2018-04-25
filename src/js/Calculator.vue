@@ -90,8 +90,6 @@
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost}}</p>
                     </div>
                 </div>
-
-
                 <div class="materials red">
                     <div class="left"> 
                         <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays}}</p>
@@ -106,9 +104,6 @@
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
                     </div>
                 </div>
-
-                
-                
             </section>
         </div>
         
@@ -155,13 +150,13 @@
                 return Math.round(this.halfInchInput*3).toLocaleString();
             },
             co2Reduction: function () {
-                 return Math.round(this.halfInchInput*625).toLocaleString();
+                 return Math.round(this.halfInchInput*625);
             },
             fuelSavings: function () {
                  return Math.round(this.halfInchInput*1261.45).toLocaleString();
             },
             carsOffRoad: function () {
-                 return Math.round(this.halfInchInput*2600).toLocaleString();
+                 return Math.round(this.halfInchInput*2600);
             },
             flushes: function () {
                  return Math.round(this.halfInchInput*5).toLocaleString();
@@ -177,11 +172,9 @@
             },
             usgCost: function () {
                  return Math.round((this.halfInchInput*1261.45)-(this.co2Reduction)).toLocaleString();
-                 
             },
             vinylCost: function () {
-                 return Math.round((this.halfInchInput*859.26)-(this.carsOffRoad)).toLocaleString();
-                 
+                 return Math.round((this.halfInchInput*859.26)+(this.carsOffRoad)).toLocaleString();
             }
         },
         watch: {
