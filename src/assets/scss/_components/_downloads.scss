@@ -43,11 +43,13 @@ section.downloads {
         font-weight: 700;
         text-align: center;
         max-width: 340px;
-        line-height: 72px;
+        
+        line-height: 38px;
         margin-bottom: 15px;
         @include breakpoint (tablet) {
           @include xy-cell(7);
           max-width: 380px;
+          line-height: 72px;
           margin: 0 auto;
           margin-bottom: 50px;
         }

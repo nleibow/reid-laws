@@ -18,8 +18,8 @@ slider;
 window.slider = slider;
 setInterval(() =>{
     slider.next();
-}, 15000)  
-
+}, 15000) 
+ 
 
 
 
