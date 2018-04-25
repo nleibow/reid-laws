@@ -362,10 +362,14 @@ section.calculator-section {
           &.red {
             background-color: $dark-red;
            .center {
+           
              p {
               color: #fff;
               font-size: 17px;
               font-weight: 600;
+              &.title {
+                margin-bottom: 0;
+              }
              }
            }
              p{
