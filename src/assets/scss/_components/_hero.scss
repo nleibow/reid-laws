@@ -73,7 +73,7 @@
         background-image: url(../img/hero-mobile-architect.jpg);
         height: 768px;
         background-size: cover;
-    background-position: bottom;
+    background-position: 40% top;
         @media (min-width: 874px){
                 height: 768px;
                 background-image: url(../img/hero-architect.jpg);
@@ -94,6 +94,7 @@
     .contractor {
         background-image: url(../img/hero-mobile-contractor.jpg);
         height: 768px;
+        background-position: 20% top;
         @media (min-width: 874px){
         height: 768px;
         background-image: url(../img/hero-contractor.jpg);
