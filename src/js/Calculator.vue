@@ -34,7 +34,9 @@
                             TRADITIONAL VINYL SHOWER&nbsp;DRAIN
                         </p>    
                     </div>
+                    <p class="disclaimer"> * Includes time for mortar to cure and 24-hour flood testing.</p>
                 </div>
+                
                 <div class="labor">
                     <div class="left">
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{co2Reduction}}</p>
@@ -71,29 +73,40 @@
                         </p>    
                     </div>
                 </div>
-                <div class="results">
-                    <p class="title">
-                        TOTAL SAVINGS WITH 
-                        USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup>
-                        SHOWER SYSTEM
-                    </p> 
-                    <div class="facts">
-                        <div>
-                            <div class="days">
-                                <p :class="{fontShrinkOne: fontShrinkOne}" >{{totalDays}}</p>
-                               
-                             </div> 
-                       </div> 
-                       <div>    
-                            <div class="price">
-                                <p :class="{fontShrinkOne: fontShrinkOne}" class="money">{{totalCost}}</p>
-                            </div>  
-                       </div>     
-                    </div>       
-                </div>    
+
+                <div class="materials red">
+                    <div class="left"> 
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{usgCost}}</p>
+                        <p class="brand">
+                            USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
+                        </p>
+                    </div>
+                    <div class="center">
+                        <p class="title">
+                           TOTAL COST OF USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM COMPARED TO TRADITIONAL SYSTEM
+                        </p> 
+                    </div>
+                    <div class="right">
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost}}</p>
+                    </div>
+                </div>
+                <div class="materials red">
+                    <div class="left"> 
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays}}</p>
+                        <span>DAYS</span>
+                    </div>
+                    <div class="center">
+                        <p class="title">
+                           TOTAL SAVINGS WITH USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
+                        </p> 
+                    </div>
+                    <div class="right">
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
+                    </div>
+                </div>
             </section>
         </div>
-        <p class="disclaimer"> *Includes time for mortar to cure and flood testing.</p>
+        
     </div>
      
 </template>
@@ -137,13 +150,13 @@
                 return Math.round(this.halfInchInput*3).toLocaleString();
             },
             co2Reduction: function () {
-                 return Math.round(this.halfInchInput*625).toLocaleString();
+                 return Math.round(this.halfInchInput*625);
             },
             fuelSavings: function () {
                  return Math.round(this.halfInchInput*1261.45).toLocaleString();
             },
             carsOffRoad: function () {
-                 return Math.round(this.halfInchInput*2600).toLocaleString();
+                 return Math.round(this.halfInchInput*2600);
             },
             flushes: function () {
                  return Math.round(this.halfInchInput*5).toLocaleString();
@@ -156,6 +169,12 @@
             },
             totalDays: function () {
                   return Math.round(this.halfInchInput*2).toLocaleString();
+            },
+            usgCost: function () {
+                 return Math.round((this.halfInchInput*1261.45)+(this.co2Reduction)).toLocaleString();
+            },
+            vinylCost: function () {
+                 return Math.round((this.halfInchInput*859.26)+(this.carsOffRoad)).toLocaleString();
             }
         },
         watch: {
