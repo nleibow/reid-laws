@@ -204,13 +204,12 @@ section.calculator-section {
                 border: none;
               }
               width: 100%;
+              padding: 0;
             }
           }
 
           .wallboards {
             input {
-
-          padding-bottom: 20px;
               margin-bottom: 20px;
             }
           }
@@ -528,9 +527,13 @@ section.calculator-section {
     }
   }
   .disclaimer {
-    margin: 0 auto;
-    top: 142px;
-    max-width: none;
-    position: absolute;
+    left: 0;
+    @include breakpoint (medium) {
+      margin: 0 auto;
+      top: 142px;
+      max-width: none;
+      position: absolute;
+    }
+  
   }
 }

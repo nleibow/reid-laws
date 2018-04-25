@@ -8,7 +8,6 @@ const Nav = () => {
 
     elementsReverse.shift();
     elementsReverse.pop();
-    window.console.log(elementsReverse);
 
     function stuck(nav) {
         nav.classList.add("stuck");
@@ -35,7 +34,6 @@ const Nav = () => {
                 for (let i = 0; i < elementsReverse.length; i++) {
                     document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.remove("active");
                 }
-                window.console.log(document.querySelector('nav a[href="' + elementsReverse[i] + '"]'))
                 document.querySelector('nav a[href="' + elementsReverse[i] + '"]').classList.add("active");
             }
 

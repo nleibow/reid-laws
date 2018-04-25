@@ -201,11 +201,9 @@
                             this.halfInchInput = parseInt(val);
                         }
                     } else {
-                        // window.console.log(val);
                         this.halfInchInput = this.previousHalfInch;
                     }
                 } else {
-                    // window.console.log(val);
                     this.halfInchInput = this.previousHalfInch;
                 }
                 if (val.length>2 ){
