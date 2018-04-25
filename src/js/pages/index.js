@@ -1,6 +1,5 @@
 import 'assets/scss/layout.scss';
 import 'assets/scss/index.scss';
-import 'assets/pdf/093000-usg-durock-shower-system-waterproofing-membrane-arch-spec-en-CB748.pdf';
 
 import Vue from 'vue'
 import Calculator from '../Calculator';
