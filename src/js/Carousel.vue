@@ -96,10 +96,10 @@
             }
         },
         beforeMount: function (){
-             if(window.location.href.indexOf("?architect") > -1) {
+             if(window.location.href.indexOf("?pageType=showerdesign") > -1) {
                     this.architect = true;
             }
-            else if (window.location.href.indexOf("?contractor") > -1){
+            else if (window.location.href.indexOf("?pageType=showerinstall") > -1){
                     this.architect = false;
              } 
       

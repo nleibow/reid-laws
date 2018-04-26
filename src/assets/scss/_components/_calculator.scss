@@ -26,8 +26,8 @@ section.calculator-section {
       font-weight: 600;
     }
     @include breakpoint (tablet) {
-      width: 120%;
-      min-width: 120%;
+      width: 100%;
+      min-width: 100%;
       font-size: 30px;
       line-height: 44px;
       letter-spacing: -1px;
@@ -98,6 +98,7 @@ section.calculator-section {
         background-color: #ECECEB;
         padding: 26px 23px;
         width: 100%;
+        position: relative;
 
         figure {
           width: 50px;
@@ -106,7 +107,8 @@ section.calculator-section {
             width: 36px;
             position: absolute;
             z-index: 1;
-            bottom: 20px;
+            bottom: 0px;
+            top: 35px;  
             left: 70px;
           }
         }
@@ -403,8 +405,10 @@ section.calculator-section {
            
              p {
               color: #fff;
-              font-size: 17px;
+              font-size: 20px;
               font-weight: 600;
+              line-height: 23px;
+              text-align: center;
               &.title {
                 margin-bottom: 0;
                 span {
