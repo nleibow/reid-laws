@@ -94,15 +94,17 @@
                     </div>
                 </div>
                 <div class="materials red">
+                    <div class="center">
+                        <p class="title">
+                           <span>TOTAL&nbsp;SAVINGS</span><br> USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
+                        </p> 
+                    </div>
+
                     <div class="left"> 
                         <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays.toLocaleString()}}</p>
                         <span>DAYS</span>
                     </div>
-                    <div class="center">
-                        <p class="title">
-                           <span>TOTAL SAVINGS</span><br> USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
-                        </p> 
-                    </div>
+                    
                     <div class="right">
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal.toLocaleString()}}</p>
                     </div>
