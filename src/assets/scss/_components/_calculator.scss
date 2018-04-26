@@ -277,7 +277,7 @@ section.calculator-section {
             width: auto;
             &.brand {
               font-size: rem-calc(14px);
-              font-weight: 400;
+              font-weight: 300;
               color: $light-gray;
               padding: 0px 60px;
               margin-top: 8px;
@@ -363,7 +363,11 @@ section.calculator-section {
             margin-bottom: 10px;
           }
           &.gray {
-            background-color: $dark-gray;
+            background-color: rgb(93, 97, 98);
+            max-height: 584px;
+            @include breakpoint (tablet) {
+              max-height: 138px;
+            }
           }
           &.red {
             background-color: $dark-red;
@@ -373,10 +377,11 @@ section.calculator-section {
               color: #fff;
               font-size: 17px;
               font-weight: 600;
+              padding: 0 40px;
               &.title {
                 margin-bottom: 0;
                 span {
-                  font-size: 20px;
+                  font-size: 24px;
                   font-weight: 300;
                   border-bottom: 1px solid;
                   margin-bottom: 4px;
@@ -385,7 +390,10 @@ section.calculator-section {
               &.cost {
                 margin-top: 0%;
                 @include breakpoint (tablet) {
-                  margin-top: 14%;
+                  margin-top: 8%;
+                  margin-left: 0;
+                  font-size: 30px;
+                  line-height: 32px;
                 }
               }
              }

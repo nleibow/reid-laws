@@ -31,7 +31,7 @@
                         <p :class="{fontShrinkOne: fontShrinkOne}"> {{flushes.toLocaleString()}}</p>
                         <span>DAYS</span>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>    
                     </div>
                     <p class="disclaimer"> * Includes time for mortar to cure and 24-hour flood testing.</p>
@@ -51,7 +51,7 @@
                     <div class="right">
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{carsOffRoad.toLocaleString()}}</p>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>    
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                     <div class="right">
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven.toLocaleString()}}</p>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>    
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                     <div class="right">
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost.toLocaleString()}}</p>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="center">
                         <p class="title">
-                           <span>TOTAL SAVINGS</span> USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
+                           <span>TOTAL SAVINGS</span><br> USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
                         </p> 
                     </div>
                     <div class="right">
