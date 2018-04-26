@@ -360,6 +360,9 @@ section.calculator-section {
           svg {
             margin-bottom: 10px;
           }
+          &.gray {
+            background-color: $dark-gray;
+          }
           &.red {
             background-color: $dark-red;
            .center {
@@ -370,7 +373,46 @@ section.calculator-section {
               font-weight: 600;
               &.title {
                 margin-bottom: 0;
-                
+                span {
+                  font-size: 20px;
+                  font-weight: 300;
+                  border-bottom: 1px solid;
+                  margin-bottom: 4px;
+                }
+              }
+              &.cost {
+                margin-top: 0%;
+                @include breakpoint (tablet) {
+                  margin-top: 14%;
+                }
+              }
+             }
+           }
+             p{
+              color: #fff;
+             
+            }
+            span {
+              color: #fff;
+              bottom: 10px !important;
+            }
+          }
+          &.gray {
+            background-color: $dark-gray;
+           .center {
+           
+             p {
+              color: #fff;
+              font-size: 17px;
+              font-weight: 600;
+              &.title {
+                margin-bottom: 0;
+                span {
+                  font-size: 20px;
+                  font-weight: 300;
+                  border-bottom: 1px solid;
+                  margin-bottom: 4px;
+                }
               }
               &.cost {
                 margin-top: 0%;

@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="materials red">
+                <div class="materials gray">
                     <div class="left"> 
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{usgCost.toLocaleString()}}</p>
                         <p class="brand">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="center">
                         <p class="cost">
-                           TOTAL COST
+                           TOTAL <br>COST
                         </p> 
                     </div>
                     <div class="right">
@@ -100,7 +100,7 @@
                     </div>
                     <div class="center">
                         <p class="title">
-                           TOTAL SAVINGS WITH USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
+                           <span>TOTAL SAVINGS</span> USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
                         </p> 
                     </div>
                     <div class="right">
