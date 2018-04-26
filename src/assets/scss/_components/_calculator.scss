@@ -530,9 +530,10 @@ section.calculator-section {
     left: 0;
     @include breakpoint (medium) {
       margin: 0 auto;
-      top: 142px;
+      top: 121px;
       max-width: none;
       position: absolute;
+      z-index: 3;
     }
   
   }
