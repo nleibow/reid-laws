@@ -82,8 +82,8 @@
                         </p>
                     </div>
                     <div class="center">
-                        <p class="title">
-                           TOTAL COST OF USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM COMPARED TO TRADITIONAL SYSTEM
+                        <p class="cost">
+                           TOTAL COST
                         </p> 
                     </div>
                     <div class="right">
