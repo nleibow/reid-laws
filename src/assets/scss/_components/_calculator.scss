@@ -371,6 +371,9 @@ section.calculator-section {
           }
           &.red {
             background-color: $dark-red;
+            .left, .right {
+              padding-top: 30px;
+            }
            .center {
            
              p {
@@ -429,7 +432,10 @@ section.calculator-section {
               &.cost {
                 margin-top: 0%;
                 @include breakpoint (tablet) {
-                  margin-top: 14%;
+                  margin-top: 9%;
+                  margin-left: 0;
+                  font-size: 25px;
+                  line-height: 27px;
                 }
               }
              }
