@@ -88,6 +88,9 @@
                     </div>
                     <div class="right">
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost.toLocaleString()}}</p>
+                        <p class="brand">
+                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                        </p>
                     </div>
                 </div>
                 <div class="materials red">
