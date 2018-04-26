@@ -37,6 +37,7 @@
                         display: none;
                     }
                 }
+
                 
                 &.hero-type {
                     margin-bottom: 15px;
@@ -45,8 +46,8 @@
                     max-height: 115px;
                     max-width: 400px;
                     @include breakpoint (tablet) {
-                        max-height: 200px;
-                        max-width: 630px;
+                        max-height: 233px;
+                        max-width: 658px;
                     }
                     
                    }
