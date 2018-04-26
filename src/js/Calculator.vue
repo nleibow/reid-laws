@@ -102,7 +102,6 @@
 
                     <div class="left"> 
                         <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays.toLocaleString()}}</p>
-                        <span>DAYS</span>
                     </div>
                     
                     <div class="right">
