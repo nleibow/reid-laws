@@ -1,0 +1,185 @@
+section.faq {
+    @include xy-grid;
+    @include flex-align(center);
+    background: #e8e8e8;
+    justify-content: center;
+    padding: 60px 0px 70px;
+    @include breakpoint (medium){
+      justify-content: space-between;
+      padding: rem-calc(34);
+      padding-top: 50px;
+      padding-bottom: 85px;
+    }
+  
+    h1 {
+      text-align: center;
+      color: #64485c;    
+      max-width: 700px;
+      margin: 0 auto 45px;
+      padding: 0 10px;
+      line-height: 40px;
+    }
+  
+    .open-text {
+      color: #5a585a;
+      font-size: rem-calc(20);
+      padding: 0 20px;
+    }
+    
+    p {
+      @include xy-cell(12);
+      text-align: center;
+      margin-bottom: rem-calc(36);
+    }
+    h3 {
+      color: #64485c;
+      font-size: rem-calc(32);
+      text-align: center;
+  
+    }
+  
+    p {
+      margin-bottom: rem-calc(60);
+    }
+  
+    div {
+      margin: 10px 0px;
+     
+      &.title {
+        @include xy-cell(12);
+        min-width: 100%;
+       
+        h3 {
+          @include xy-cell(12);
+          margin: 0 auto;
+          font-weight: 700;
+          text-align: center;
+          max-width: 340px;
+          
+          line-height: 38px;
+          margin-bottom: 15px;
+          @include breakpoint (tablet) {
+            @include xy-cell(7);
+            max-width: 380px;
+            line-height: 43px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  
+    .download-img {
+      display: block;
+      border-radius: 50%;
+      margin: 0 auto rem-calc(20px);
+      height: rem-calc(105px);
+      width: rem-calc(105px);
+  
+      &.d-1 {
+        background-image: url("../img/icon-hands.png");
+      }
+  
+      &.d-2 {
+        background-image: url("../img/icon-water.png");
+      }
+  
+      &.d-3 {
+        background-image: url("../img/icon-pen.png");
+      }
+  
+      &.d-4 {
+        background-image: url("../img/icon-wrench.png");
+      }
+  
+      .download-hover-info {
+        visibility: hidden;
+        padding: rem-calc(35px) 0 0;
+        height: 100%;
+        width: 100%;
+  
+  
+        p {
+          font-size: rem-calc(12px);
+          margin: 0 0 rem-calc(10px);
+          text-align: left;
+          line-height: rem-calc(18px);
+          padding: 0 rem-calc(20px) 0 rem-calc(30px);
+        }
+      }
+    }
+  
+    p {
+      &.title {
+        font-size: rem-calc(18px);
+        font-weight: 700;
+        margin-bottom: rem-calc(10px);
+        color: #64485c;
+        line-height: remcalc(23px);
+        text-align: left;
+        padding: 5px;
+  
+      }
+  
+      &.title-bold {
+        font-size: rem-calc(14px);
+        font-weight: 400;
+        margin-bottom: rem-calc(20px);
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        text-align: left;
+        padding: 10px;
+        @include breakpoint (medium) {
+          margin-left: 20px;
+        }
+       
+        &.show {
+          transition: all .5s ease-in-out;
+          max-height: 590px;
+          height: 600px;
+        }
+        &.showOne {
+          transition: all .5s ease-in-out;
+          max-height: 590px;
+          height: 300px;
+        }
+      }
+    }
+    a {
+      color: #501b1d;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+  
+    .download, span {
+      text-transform: uppercase;
+    }
+    .download {
+      color: $primary-color;
+      display: block;
+      font-weight: 600;
+      font-size: rem-calc(14px);
+      position: relative;
+      text-align: center;
+      margin-bottom: rem-calc(5px);
+  
+      &:before {
+        content: '';
+        display: inline-block;
+        background: svg-load('../img/icon_download.svg', fill=#000, stroke=#fff) no-repeat center center / contain;
+        margin-right: rem-calc(5px);
+        height: rem-calc(13px);
+        width: rem-calc(14px);
+      }
+    }
+  
+    span {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }

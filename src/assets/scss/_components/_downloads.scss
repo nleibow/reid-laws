@@ -10,6 +10,21 @@ section.downloads {
     padding-top: 50px;
     padding-bottom: 85px;
   }
+
+  h1 {
+    text-align: center;
+    color: #64485c;    
+    max-width: 700px;
+    margin: 0 auto 45px;
+    padding: 0 10px;
+    line-height: 40px;
+  }
+
+  .open-text {
+    color: #5a585a;
+    font-size: rem-calc(20);
+    padding: 0 20px;
+  }
   
   p {
     @include xy-cell(12);
@@ -17,7 +32,7 @@ section.downloads {
     margin-bottom: rem-calc(36);
   }
   h3 {
-    color: #C41230;
+    color: #64485c;
     font-size: rem-calc(32);
     text-align: center;
 
@@ -49,7 +64,7 @@ section.downloads {
         @include breakpoint (tablet) {
           @include xy-cell(7);
           max-width: 380px;
-          line-height: 72px;
+          line-height: 43px;
           margin: 0 auto;
           margin-bottom: 50px;
         }
@@ -65,7 +80,7 @@ section.downloads {
     width: rem-calc(105px);
 
     &.d-1 {
-      background-image: url("../img/icon-time.png");
+      background-image: url("../img/icon-hands.png");
     }
 
     &.d-2 {
@@ -102,7 +117,7 @@ section.downloads {
       font-size: rem-calc(18px);
       font-weight: 700;
       margin-bottom: rem-calc(10px);
-      color: #C41230;
+      color: #64485c;
       line-height: remcalc(23px);
 
     }
@@ -111,10 +126,30 @@ section.downloads {
       font-size: rem-calc(14px);
       font-weight: 400;
       margin-bottom: rem-calc(20px);
-      max-width: 225px;
+      max-width: 224px;
       margin: 0 auto;
+      max-height: 190px;
+      overflow: hidden;
+      transition: all .5s ease-in-out;
+      &.show {
+        transition: all .5s ease-in-out;
+        max-height: 590px;
+        height: 600px;
+      }
+      &.showOne {
+        transition: all .5s ease-in-out;
+        max-height: 590px;
+        height: 300px;
+      }
     }
   }
+  a {
+    color: #501b1d;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
 
   .download, span {
     text-transform: uppercase;
