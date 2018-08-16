@@ -1,7 +1,7 @@
 .hero {
     .architect, .contractor {
         @include xy-grid(12);
-        height: 670px;
+        height: 220px;
         background-size: cover;
         justify-content: flex-end;
         text-align: center;
@@ -9,18 +9,17 @@
 
         .container {
             height: 460px;
-            @include breakpoint(tablet) {
+            @media (min-width: 874px) {
                 @include xy-cell(6);
                 margin-bottom: 120px;
             }
             div {
-                font-weight: 400;
-                line-height: 20px;
+                line-height: 30px;
                 color: #fff;
                 padding: 0 20px;
-                font-size: 15px;
+                font-size: 21px;
                 font-weight: 400;
-                text-shadow: 7px 6px 40px #000000;
+                text-shadow: 5px 8px 35px #fff;
                 @include breakpoint (tablet) {
                     padding: 5px;
                 }
@@ -37,6 +36,7 @@
                         display: none;
                     }
                 }
+
                 
                 &.hero-type {
                     margin-bottom: 15px;
@@ -45,8 +45,8 @@
                     max-height: 115px;
                     max-width: 400px;
                     @include breakpoint (tablet) {
-                        max-height: 200px;
-                        max-width: 630px;
+                        max-height: 233px;
+                        max-width: 658px;
                     }
                     
                    }
@@ -70,14 +70,19 @@
         }
     }
     .architect {
-        background-image: url(../img/hero-mobile-architect.jpg);
-        height: 768px;
-            @include breakpoint (tablet){
-                height: 768px;
-                background-image: url(../img/hero-architect.jpg);
-                background-position: center;
+        background-image: url(../img/city-reid.jpg);
+        height: 500px;
+        background-size: cover;
+        background-position: 0% top;
+        @media (min-width: 874px){
+                background-position: unset;
                 align-content: flex-start;
                
+                }
+                .container {
+                    @media (min-width: 874px){
+                        margin-left: 48%;
+                    }
                 }
            
             }
@@ -85,12 +90,11 @@
         
     
     .contractor {
-        background-image: url(../img/hero-mobile-contractor.jpg);
-        height: 768px;
-        @include breakpoint (tablet){
-        height: 768px;
-        background-image: url(../img/hero-contractor.jpg);
-        background-position: center;
+        background-image: url(../img/friendly-reid.jpg);
+        height: 500px;
+        background-position: 20% top;
+        @media (min-width: 874px){
+        background-position: unset;
         align-content: flex-start;
        
         }

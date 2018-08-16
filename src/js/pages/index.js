@@ -1,6 +1,5 @@
 import 'assets/scss/layout.scss';
 import 'assets/scss/index.scss';
-import 'assets/pdf/093000-usg-durock-shower-system-waterproofing-membrane-arch-spec-en-CB748.pdf';
 
 import Vue from 'vue'
 import Calculator from '../Calculator';
@@ -18,7 +17,9 @@ slider;
 window.slider = slider;
 setInterval(() =>{
     slider.next();
-}, 15000)  
+}, 5000) 
+ 
+
 
 
   var paginationDots = Array.prototype.slice.call(document.querySelectorAll('.Wallop-dot'));
@@ -90,6 +91,37 @@ smoothscroll.polyfill();
 // openVideo.addEventListener('click', toggleVideoOverlay);
 // closeVideo.addEventListener('click', toggleVideoOverlay);
 
+const openApproach = document.getElementById('openApproach');
+const approach = document.getElementById('approach');
+
+const toggleReadMore = () =>{
+  window.console.log('clicked');
+ if(approach.classList.contains('show')) {
+   approach.classList.remove('show');
+   openApproach.innerHTML= 'READ MORE';
+ } else {
+  approach.classList.add('show');
+  openApproach.innerHTML= 'READ LESS';
+ }
+}
+openApproach.addEventListener('click', toggleReadMore);
+
+const openZealous = document.getElementById('openZealous');
+const zealous = document.getElementById('zealous');
+
+const toggleReadMoreOne = () =>{
+  window.console.log('clicked');
+ if(zealous.classList.contains('showOne')) {
+   zealous.classList.remove('showOne');
+   openZealous.innerHTML= 'READ MORE';
+ } else {
+  zealous.classList.add('showOne');
+  openZealous.innerHTML= 'READ LESS';
+ }
+}
+
+openZealous.addEventListener('click', toggleReadMoreOne);
+
 
 
 if (module.hot) {
@@ -103,3 +135,4 @@ if (module.hot) {
     module.hot.accept();
 }
 
+document.querySelectorAll("li").forEach();

@@ -17,7 +17,7 @@
             <section class="outputs">
                 <div class="days">
                     <div class="left">
-                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{galReduction}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{galReduction.toLocaleString()}}</p>
                         <span>DAYS</span>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
@@ -28,10 +28,10 @@
                          <span>TOTAL NUMBER OF DAYS<sup>*</sup></span>
                     </div>
                     <div class="right">
-                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{flushes}}</p>
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{flushes.toLocaleString()}}</p>
                         <span>DAYS</span>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>    
                     </div>
                     <p class="disclaimer"> * Includes time for mortar to cure and 24-hour flood testing.</p>
@@ -39,7 +39,7 @@
                 
                 <div class="labor">
                     <div class="left">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{co2Reduction}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{co2Reduction.toLocaleString()}}</p>
                        <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -49,15 +49,15 @@
                         <span>LABOR COSTS</span>
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{carsOffRoad}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{carsOffRoad.toLocaleString()}}</p>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>    
                     </div>
                 </div>
                 <div class="materials">
                     <div class="left">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{fuelSavings}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{fuelSavings.toLocaleString()}}</p>
                         <p class="brand">
                             USG DUROCK™ BRAND INFINITY DRAIN® SHOWER SYSTEM
                         </p>
@@ -67,14 +67,14 @@
                          <span>MATERIALS COSTS</span>
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven.toLocaleString()}}</p>
                         <p class="brand">
-                            TRADITIONAL VINYL SHOWER&nbsp;DRAIN
+                            Traditional Shower Construction
                         </p>    
                     </div>
                 </div>
 
-                <div class="materials red">
+                <div class="materials gray">
                     <div class="left"> 
                         <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{usgCost.toLocaleString()}}</p>
                         <p class="brand">
@@ -82,26 +82,30 @@
                         </p>
                     </div>
                     <div class="center">
-                        <p class="title">
-                           TOTAL COST OF USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM COMPARED TO TRADITIONAL SYSTEM
+                        <p class="cost">
+                           TOTAL <br>COST
                         </p> 
                     </div>
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylCost.toLocaleString()}}</p>
+                        <p class="brand">
+                            Traditional Shower Construction
+                        </p>
                     </div>
                 </div>
                 <div class="materials red">
-                    <div class="left"> 
-                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays}}</p>
-                        <span>DAYS</span>
-                    </div>
                     <div class="center">
                         <p class="title">
-                           TOTAL SAVINGS WITH USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
+                           <span>TOTAL&nbsp;SAVINGS</span><br> USG DUROCK<sup>™</sup> BRAND INFINITY DRAIN<sup>®</sup> SHOWER SYSTEM
                         </p> 
                     </div>
+
+                    <div class="left"> 
+                        <p :class="{fontShrinkOne: fontShrinkOne}"> {{totalDays.toLocaleString()}}</p>
+                    </div>
+                    
                     <div class="right">
-                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{milesNotDriven}}</p>
+                        <p class="money" :class="{fontShrinkOne: fontShrinkOne}">{{vinylFinal.toLocaleString()}}</p>
                     </div>
                 </div>
             </section>
@@ -201,11 +205,9 @@
                             this.halfInchInput = parseInt(val);
                         }
                     } else {
-                        // window.console.log(val);
                         this.halfInchInput = this.previousHalfInch;
                     }
                 } else {
-                    // window.console.log(val);
                     this.halfInchInput = this.previousHalfInch;
                 }
                 if (val.length>2 ){
