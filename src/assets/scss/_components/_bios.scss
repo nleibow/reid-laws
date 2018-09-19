@@ -10,14 +10,16 @@ section.bios {
         @include breakpoint (large){
             display: flex;
             justify-content: space-evenly;
+            padding: 0 50px;
         }
         
         figure.reid {
             width: 243px;
             height: 237px;
             background-image: url("../img/reid-bio.jpg");
-            background-size: 100%;
+            background-size: 125%;
             background-repeat: no-repeat;
+            background-position: 50%;
             border-radius: 55%;
             margin: 0 auto;
             margin-top: 30px;
@@ -100,7 +102,7 @@ section.bios {
             margin: 0 auto;
             margin-top: 20px;
             p {
-                margin: 185px 56px;
+                margin: 200px 56px;
                 padding: 0;
                 color: #fff;
             }
@@ -110,6 +112,10 @@ section.bios {
             max-width: 800px;
             padding: 20px;
             margin: 0 auto;
+        }
+        .bio-p {
+            display: block;
+            margin-bottom: 30px;
         }
     }
 }

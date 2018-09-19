@@ -17,7 +17,7 @@ slider;
 window.slider = slider;
 setInterval(() =>{
     slider.next();
-}, 5000) 
+}, 500000) 
  
 
 

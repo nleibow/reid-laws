@@ -1,28 +1,37 @@
 <template>
     <div class="Wallop-list">
-        <div class="Wallop-item Wallop-item--current architect">
+        <div class="Wallop-item  photo-1">
             <div class="container">
                 <figure class="hero-type">
                 </figure>    
-                <div>
-                    Welcome to Weinstein Law
-                </div>
+                
             </div>
         </div>
-        <div class="Wallop-item contractor"> 
+        <div class="Wallop-item  photo-2"> 
             <div class="container">
                 <figure class="hero-type">
                 </figure>    
-                 <div>
-                    Welcome to Weinstein Law
-                </div>
+                
+            </div>
+        </div>
+        <div class="Wallop-item photo-3"> 
+            <div class="container">
+                <figure class="hero-type">
+                </figure>    
+                
+            </div>
+        </div>
+        <div class="Wallop-item Wallop-item--current photo-4"> 
+            <div class="container">
+                <figure class="hero-type">
+                </figure>    
             </div>
         </div>
     </div>
 </template>
 <script>
 
-    import usgLogo from "../assets/img/usg-logo-mobile.svg";
+    
     import smoothScroll from 'smoothscroll-polyfill';
 
     // Smooth Scroll
@@ -36,31 +45,12 @@
         ],
         data() {
             return {
-                usgLogo: usgLogo,
                 architect: true,
             }
         },
-        beforeMount: function (){
-             if(window.location.href.indexOf("?pageType=showerdesign") > -1) {
-                    this.architect = true;
-            }
-            else if (window.location.href.indexOf("?pageType=showerinstall") > -1){
-                    this.architect = false;
-             } 
-      
-        },
         mounted: function () {
              window.slider.reset();
-        },
-        methods: {
-            scrollToBenefits: function () {
-                const scrollToElement = document.querySelector("#ProductBenefits");
-                window.scroll({top: scrollToElement.offsetTop - 75, behavior: 'smooth'});
-            },
-            scrollToCalc: function () {
-                const scrollToElement = document.querySelector("#Downloads");
-                window.scroll({top: scrollToElement.offsetTop - 75, behavior: 'smooth'});
-            }
         }
+       
     }
 </script>

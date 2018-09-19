@@ -69,7 +69,7 @@
             }
         }
     }
-    .architect {
+    .photo-1 {
         background-image: url(../img/city-reid.jpg);
         height: 500px;
         background-size: cover;
@@ -89,15 +89,36 @@
 
         
     
-    .contractor {
+    .photo-2 {
         background-image: url(../img/friendly-reid.jpg);
         height: 500px;
-        background-position: 20% top;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 55% 18%;
         @media (min-width: 874px){
-        background-position: unset;
         align-content: flex-start;
        
         }
         
+    }
+    .photo-3 {
+        background-image: url(../img/reid-handshake.jpg);
+        height: 500px;
+        background-position: 20% top;
+        @media (min-width: 874px){
+        align-content: flex-start;
+       
+        }
+        
+    }
+    .photo-4 {
+        background-image: url(../img/BW-reid.jpg);
+        height: 500px;
+        background-position: 20% top;
+        background-size: 100%;
+        @media (min-width: 874px){
+        align-content: flex-start;
+       
+        }
     }
 }
