@@ -14,14 +14,14 @@
                 
             </div>
         </div>
-        <div class="Wallop-item photo-3"> 
+        <div class="Wallop-item Wallop-item--current photo-3"> 
             <div class="container">
                 <figure class="hero-type">
                 </figure>    
                 
             </div>
         </div>
-        <div class="Wallop-item Wallop-item--current photo-4"> 
+        <div class="Wallop-item photo-4"> 
             <div class="container">
                 <figure class="hero-type">
                 </figure>    

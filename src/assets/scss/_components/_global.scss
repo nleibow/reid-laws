@@ -69,7 +69,7 @@ dd {
 */
 body {
   background: $white;
-  color: $secondary-color;
+  color: #000;
   @include xy-grid-container;
 }
 

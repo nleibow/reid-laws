@@ -2,7 +2,6 @@ import 'assets/scss/layout.scss';
 import 'assets/scss/index.scss';
 
 import Vue from 'vue'
-import Calculator from '../Calculator';
 import Carousel from '../Carousel';
 import smoothscroll from 'smoothscroll-polyfill';
 import Nav from '../modules/nav.js';
@@ -57,12 +56,7 @@ nav;
 
 // Vue for calculator
 Vue.config.productionTip = false;
-
-// Main Vue Component
-new Vue({
-    el: '#calculatorTarget',
-    render: h => h(Calculator)
-});
+//Main vue component
 
 new Vue({
     el: '#carousel-target',
@@ -72,24 +66,6 @@ new Vue({
 // Smooth Scroll
 window.__forceSmoothScrollPolyfill__ = true;
 smoothscroll.polyfill();
-
-
-// const openVideo = document.getElementById('watch-video');
-// const closeVideo = document.getElementById('close-video-button');
-// const videoOverlay = document.getElementById('video-overlay');
-
-// const toggleVideoOverlay = () =>{
-//     if(videoOverlay.classList.contains('show')) {
-//         window.videoPlayer.stopVideo();
-//         videoOverlay.classList.remove('show');
-//     } else {
-//         window.videoPlayer.playVideo();
-//         videoOverlay.classList.add('show');
-//     }
-// };
-
-// openVideo.addEventListener('click', toggleVideoOverlay);
-// closeVideo.addEventListener('click', toggleVideoOverlay);
 
 
 

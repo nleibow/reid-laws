@@ -21,7 +21,7 @@ section.practice {
     }
   
     .open-text {
-      color: #5a585a;
+      color: #000;
       font-size: rem-calc(20);
       padding: 0 20px;
     }
@@ -78,21 +78,7 @@ section.practice {
       height: rem-calc(105px);
       width: rem-calc(105px);
   
-      &.d-1 {
-        background-image: url("../img/icon-hands.png");
-      }
-  
-      &.d-2 {
-        background-image: url("../img/icon-water.png");
-      }
-  
-      &.d-3 {
-        background-image: url("../img/icon-pen.png");
-      }
-  
-      &.d-4 {
-        background-image: url("../img/icon-wrench.png");
-      }
+     
   
       .download-hover-info {
         visibility: hidden;
@@ -168,14 +154,7 @@ section.practice {
       text-align: center;
       margin-bottom: rem-calc(5px);
   
-      &:before {
-        content: '';
-        display: inline-block;
-        background: svg-load('../img/icon_download.svg', fill=#000, stroke=#fff) no-repeat center center / contain;
-        margin-right: rem-calc(5px);
-        height: rem-calc(13px);
-        width: rem-calc(14px);
-      }
+      
     }
   
     span {

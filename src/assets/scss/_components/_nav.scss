@@ -23,7 +23,7 @@ section.navigation {
     left: 0;
     top: 0;
   }
-
+  
   .mobile-nav {
     background: #ffffff;
     border-bottom: 1px solid rgba(112, 112, 112, .2);
@@ -32,6 +32,12 @@ section.navigation {
     height: rem-calc(35px);
     width: 100%;
     padding: 20px 0;
+    .mobile-logo {
+      image {
+        height: 30px;
+        width: 30px;
+      }
+    }
 
 
     a {
@@ -191,7 +197,10 @@ section.navigation {
         }
 
           .medium {
-            display: none;
+            @media (min-width:0px){
+              display: none;
+            }
+           
             @include breakpoint (tablet) {
               display: block;
               height: 40px;
@@ -203,6 +212,7 @@ section.navigation {
           }
           .large {
             display: none;
+           
             @include breakpoint (tablet) {
               display: none;
             }

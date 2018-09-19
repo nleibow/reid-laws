@@ -2,7 +2,6 @@ import 'assets/scss/layout.scss';
 import 'assets/scss/index.scss';
 
 import Vue from 'vue'
-import Calculator from '../Calculator';
 import Carousel from '../Carousel';
 import smoothscroll from 'smoothscroll-polyfill';
 import Nav from '../modules/nav.js';
@@ -59,11 +58,6 @@ nav;
 Vue.config.productionTip = false;
 
 // Main Vue Component
-new Vue({
-    el: '#calculatorTarget',
-    render: h => h(Calculator)
-});
-
 new Vue({
     el: '#carousel-target',
     render: h => h(Carousel)
